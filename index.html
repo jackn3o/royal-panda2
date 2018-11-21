@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/animation.css" rel="stylesheet" type="text/css">
+    <link href="css/flexboxgrid.css" rel="stylesheet" type="text/css">
+    <script src="lib/jquery-3.3.1.slim.min.js"></script>
+    <style>
+        .inner_body {
+            background-color: #fcf1ef;
+            color: rgba(0, 0, 0, .87);
+            height: 100vh;
+            width: 100vw;
+            font-family: Microsoft YaHei, 黑体, 宋体, sans-serif !important;
+            font-size: 16px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .rp_swing_box {
+            position: absolute;
+            height: 8rem;
+            width: 8rem;
+            right: 1rem;
+            top: -2px;
+        }
+
+        .rp_suo {
+            height: 100%;
+            width: 100%;
+        }
+
+        .rp_header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+            transition: all 0.25s linear 0s;
+        }
+
+        .rp_header.active {
+            background-color: #f2dbcf;
+            box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        }
+
+        .rp_content_box {
+            padding: 1rem;
+        }
+
+        .rp_content_title {
+            display: flex;
+            vertical-align: center;
+            padding: 1rem;
+        }
+
+        .rp_content_title strong {
+            font-weight: 700;
+        }
+
+        .rp_toolbox {
+            display: flex;
+            box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+            border-radius: 12px;
+            background-color: #fff;
+            padding: 0 1rem;
+        }
+
+        .rp_footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            max-height: 40px;
+            background-color: rgb(248, 248, 248);
+            color: #9e9e9e;
+            padding: 0.25rem;
+        }
+
+        .rp_footer .copy_right {
+            max-height: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .rp_footer .partner {
+            max-height: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flex_spacer {
+            flex: 1;
+        }
+
+        .font_title {
+            font-size: 1.4rem;
+        }
+
+        .font_subheading {
+            font-size: 1.1rem;
+        }
+
+
+        .font_caption {
+            font-size: 0.8rem;
+        }
+
+        .rp_divider {
+            display: block;
+            flex: 1 1 0px;
+            max-width: 100%;
+            height: 0;
+            max-height: 0;
+            border-style: solid;
+            border-width: thin 0 0;
+            transition: inherit;
+            border-color: rgba(0, 0, 0, .12);
+        }
+
+        .rp_divider.vertical {
+            align-self: stretch;
+            border-style: solid;
+            border-width: 0 thin 0 0;
+            display: inline-flex;
+            height: inherit;
+            min-height: 100%;
+            max-height: 100%;
+            max-width: 0;
+            width: 0;
+            vertical-align: text-bottom;
+        }
+
+        .grey--text {
+            color: #757575 !important;
+            caret-color: #757575 !important;
+        }
+
+        .rp_card {
+            display: block;
+            background-color: #fff;
+            border-color: #fff;
+            border-radius: 2px;
+            color: rgba(0, 0, 0, .87);
+            min-width: 0;
+            position: relative;
+            text-decoration: none;
+            transition: .3s cubic-bezier(.25, .8, .5, 1);
+            box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+        }
+
+        .rp_card.flat {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .14), 0 0 0 0 rgba(0, 0, 0, .12);
+        }
+
+        .rp_card.round {
+            border-radius: 12px;
+        }
+
+        .rp_card--media {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            flex: 1 0 auto;
+            transition: all 0.2s ease-in-out 0.05s;
+        }
+
+        .rp-card--media img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .rp_card--content {
+            padding: 1rem;
+        }
+
+        .transparent--background {
+            background-color: transparent;
+        }
+
+        .accent--text {
+            color: #faba15 !important;
+            caret-color: #faba15 !important;
+        }
+
+        /* to do */
+        .rating {
+            height: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inner_body">
+        <figure class="rp_swing_box">
+            <img class="rp_suo swing" src="img/base/suo.png">
+        </figure>
+        <div class="rp_header active">
+            <div>
+                <img src="img/base/royal-panda.png">
+            </div>
+            <div>
+                <img src="img/base/panda.png">
+            </div>
+        </div>
+        <div class="rp_content_box">
+            <div class="rp_toolbox">
+                <div class="wrapper-dropdown-5" tabindex="1">品牌牌子
+                    <ul class="dropdown">
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                    </ul>
+                </div>
+                <span class="rp_divider vertical"></span>
+                <div class="wrapper-dropdown-5" tabindex="1">全部分类
+                    <ul class="dropdown">
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                    </ul>
+                </div>
+                <span class="rp_divider vertical"></span>
+                <div class="wrapper-dropdown-5" tabindex="1">宝贝年龄
+                    <ul class="dropdown">
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                    </ul>
+                </div>
+                <span class="rp_divider vertical"></span>
+                <div class="wrapper-dropdown-5" tabindex="1">产品材料
+                    <ul class="dropdown">
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                    </ul>
+                </div>
+                <span class="rp_divider vertical"></span>
+                <div class="wrapper-dropdown-5" tabindex="1">新品发布
+                    <ul class="dropdown">
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                    </ul>
+                </div>
+                <span class="rp_divider vertical"></span>
+                <div class="wrapper-dropdown-5" tabindex="1">热卖产品
+                    <ul class="dropdown">
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                    </ul>
+                </div>
+                <span class="rp_divider vertical"></span>
+                <div class="wrapper-dropdown-5" tabindex="1">排序
+                    <ul class="dropdown">
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                        <li><a href="#">xxx</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rp_content_title">
+                <div class="flex_spacer"></div>
+                <div class="grey--text">共 <strong>6</strong> 产品显示</div>
+            </div>
+            <div class="rp_divider"></div>
+            <div class="row pa-3">
+                <div class="col-xs-12 col-md-4 col-lg-3 pa-3">
+                    <div class="rp_card flat transparent--background">
+                        <div class="rp_card--content pa-3">
+                            <div class="rp_card flat">
+                                <div class="rp_card--media pa-3" style="max-height: 260px;">
+                                    <img class="media" src="img/products/abott.png" style="max-height: 240px;">
+                                </div>
+                            </div>
+                            <div class="rating"></div>
+                            <div class="font_title">Abott</div>
+                            <div class="font_subheading">新生儿配方液态奶</div>
+                            <div class="accent--text">170元</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 pa-3">
+                    <div class="rp_card flat transparent--background">
+                        <div class="rp_card--content pa-3">
+                            <div class="rp_card flat">
+                                <div class="rp_card--media pa-3" style="max-height: 260px;">
+                                    <img class="media" src="img/products/hegen.png" style="max-height: 240px;">
+                                </div>
+                            </div>
+                            <div class="rating"></div>
+                            <div class="font_title">Hegen</div>
+                            <div class="font_subheading">婴孩多功能奶瓶</div>
+                            <div class="accent--text">170元</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 pa-3">
+                    <div class="rp_card flat transparent--background">
+                        <div class="rp_card--content pa-3">
+                            <div class="rp_card flat">
+                                <div class="rp_card--media pa-3" style="max-height: 260px;">
+                                    <img class="media" src="img/products/hipp.png" style="max-height: 240px;">
+                                </div>
+                            </div>
+                            <div class="rating"></div>
+                            <div class="font_title">HiPP</div>
+                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
+                            <div class="accent--text">170元</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rp_footer">
+        <div class="copy_right">
+            <div class="font_caption">&copy;RoyalPanda / 泸ICP备17033585号-1</div>
+            <div class="font_caption" style="margin-top:6px;">地址: 中国上海市黄浦区广东路500号世界贸易大厦5楼</div>
+        </div>
+        <div class="flex_spacer"></div>
+        <div class="partner" style="margin-right:6px;">
+            <img src="img/base/truste.png">
+        </div>
+        <div class="partner" style="margin-right:6px;">
+            <img src="img/base/v-logo-a.png">
+        </div>
+        <div class="partner" style="margin-right:6px;">
+            <img src="img/base/v-logo-b.png">
+        </div>
+        <div class="partner" style="margin-right:6px;">
+            <img src="img/base/v-logo-c.png">
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>
+    'use strict';
+
+</script>
+
+</html>
