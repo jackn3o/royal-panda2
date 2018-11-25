@@ -14,122 +14,7 @@
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <style>
 
-        /* to do */
-        .rating {
-            height: 1rem;
-        }
 
-        .overflow_x_container{
-            display: flex;
-            justify-content: center;
-            padding: 0 4rem;
-            position: relative;
-        }
-        .overflow_x_container:before{
-            content: "";
-            position: absolute;
-            display: block;
-            width: 2rem;
-            top: 0;
-            bottom:0;
-            left: 3.5rem;
-            box-shadow: inset 50px 0 25px -25px #fcf1ef;
-            z-index: 3;
-        }
-        .overflow_x_container:after{
-            content: "";
-            position: absolute;
-            display: block;
-            width: 2rem;
-            top: 0;
-            bottom:0;
-            right: 3.5rem;
-            box-shadow: inset -50px 0 25px -25px #fcf1ef;
-            z-index: 3;
-        }
-        
-        .overflow_x_container .slider {
-            overflow-x: hidden;
-            display: flex;
-            flex-wrap: nowrap;
-        } 
-     
-
-        .overflow_x_container .btn_left,
-        .overflow_x_container .btn_right {
-            z-index: 3;
-        }
-
-        .rp_product_box{
-            min-width: 260px;
-            width: 260px;
-            padding: 1.5rem;
-            line-height: 1.5;
-            position: relative;
-        }
-
-        .rp_product_card--reveal{
-            position: absolute;
-            top:1rem;
-            left: 1rem;
-            right: 1rem;
-            bottom: 1rem;
-            background-color: #fff;
-            border-color: #fff;
-            border-radius: 12px;
-            opacity: 0;
-            -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(0); 
-            -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(0); 
-            -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(0);
-            transition: all 200ms ease-in;
-            transform: scale(0);   
-        }
-        .rp_product_box .rp_product_card{
-        }
-        
-        /* .rp_product_card:focus .rp_product_card--reveal,
-        .rp_product_card:active { */
-        .rp_product_box:hover .rp_product_card--reveal {
-            opacity: 1;
-            transform: scale(1);   
-            transition: all 250ms ease-in;
-            -webkit-transform: scale(1); 
-            -webkit-transition: all 250ms ease-in;
-            -ms-transform: scale(1); 
-            -moz-transition: all 250ms ease-in;
-            -moz-transform: scale(1);
-            box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
-        }
-        .rp_product_box:hover  .rp_product_card--media img{
-            transform: scale(1.1);   
-            -webkit-transform: scale(1.2); 
-            -webkit-transition: all 250ms ease-in;
-            -ms-transform: scale(1.2); 
-            -moz-transition: all 250ms ease-in;
-            -moz-transform: scale(1.2);
-            transition: all 250ms ease-in;
-            transition-delay: 250ms;
-        }
-
-        .rp_product_card--media{
-            max-height: 240px;;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .rp_product_card--media img{
-            height:220px;
-            transform: scale(1);   
-            -webkit-transform: scale(1); 
-            -webkit-transition: all 250ms ease-out;
-            -ms-transform: scale(1); 
-            -moz-transition: all 250ms ease-out;
-            -moz-transform: scale(1);
-            transition: all 250ms ease-out;
-        }
     </style>
 </head>
 
@@ -143,7 +28,7 @@
                 <img src="img/base/royal-panda.png">
             </div>
             <div class="rp_panda_logo">
-                <img id="js_pandaImage" src="img/base/panda.png">
+                <!-- src="img/base/panda.png" -->
             </div>
         </div>
         <div class="container-fluid">
@@ -231,6 +116,7 @@
                 <div id="js_product_list_box" class="slider">
                     <div class="rp_product_box">
                         <div class="rp_product_card--reveal"></div>
+                        <div class="hover_box"></div>
                         <div class="rp_product_card">
                             <div class="rp_card flat">
                                 <div class="rp_product_card--media pa-3">

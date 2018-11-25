@@ -27,6 +27,7 @@ body {
     width: 8rem;
     right: 1rem;
     top: -2px;
+    z-index: 7;
 }
 
 .rp_suo {
@@ -42,11 +43,30 @@ body {
     padding: 2rem 0;
     transition: all 0.25s linear 0s;
     height: 12rem;
+    z-index: 6;
 }
 
 .rp_header.active {
     background-color: #f2dbcf;
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+}
+
+.rp_panda_logo {
+    width: 80px;
+    height: 100px !important;
+    background-image: url("../img/base/panda.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.rp_panda_logo:hover {
+    width: 80px;
+    height: 100px !important;
+    background-image: url("../img/base/panda.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 .rp_content_title {
@@ -203,6 +223,129 @@ body {
     flex: 1 1 100%;
     padding: 24px;
     width: 100%;
+}
+
+/* to do */
+
+.rating {
+    height: 1rem;
+}
+
+.overflow_x_container {
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem;
+    position: relative;
+}
+
+.overflow_x_container:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2rem;
+    top: 0;
+    bottom: 0;
+    left: 3.5rem;
+    box-shadow: inset 50px 0 25px -25px #fcf1ef;
+    z-index: 3;
+}
+
+.overflow_x_container:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2rem;
+    top: 0;
+    bottom: 0;
+    right: 3.5rem;
+    box-shadow: inset -50px 0 25px -25px #fcf1ef;
+    z-index: 3;
+}
+
+.overflow_x_container .slider {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.overflow_x_container .btn_left,
+.overflow_x_container .btn_right {
+    z-index: 3;
+}
+
+.rp_product_box {
+    min-width: 260px;
+    width: 260px;
+    padding: 1.5rem;
+    line-height: 1.5;
+    position: relative;
+}
+
+.rp_product_card--reveal {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 12px;
+    opacity: 0;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(0);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(0);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(0);
+    transition: all 200ms ease-in;
+    transform: scale(0);
+}
+
+.rp_product_box .rp_product_card {}
+
+/* .rp_product_card:focus .rp_product_card--reveal,
+    .rp_product_card:active { */
+
+.rp_product_box:hover .rp_product_card--reveal {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 250ms ease-in;
+    -webkit-transform: scale(1);
+    -webkit-transition: all 250ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 250ms ease-in;
+    -moz-transform: scale(1);
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.rp_product_box:hover .rp_product_card--media img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -webkit-transition: all 250ms ease-in;
+    -ms-transform: scale(1.2);
+    -moz-transition: all 250ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 250ms ease-in;
+    transition-delay: 250ms;
+}
+
+.rp_product_card--media {
+    max-height: 240px;
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rp_product_card--media img {
+    height: 220px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -webkit-transition: all 250ms ease-out;
+    -ms-transform: scale(1);
+    -moz-transition: all 250ms ease-out;
+    -moz-transform: scale(1);
+    transition: all 250ms ease-out;
 }
 
 .rp_btn {
