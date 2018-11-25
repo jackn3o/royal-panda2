@@ -258,7 +258,7 @@ body {
 
 /* kdksdk */
 
-.wrapper-dropdown-5 {
+.rp-dropdown {
     /* Size & position */
     position: relative;
     min-width: 4rem;
@@ -276,7 +276,7 @@ body {
     transition: all 0.3s ease-out;
 }
 
-.wrapper-dropdown-5:after {
+.rp-dropdown:after {
     /* Little arrow */
     content: "";
     width: 0;
@@ -290,7 +290,7 @@ body {
     border-color: #4cbeff transparent;
 }
 
-.wrapper-dropdown-5 .dropdown {
+.rp-dropdown .dropdown {
     /* Size & position */
     z-index: 3;
     position: absolute;
@@ -314,11 +314,11 @@ body {
     overflow: hidden;
 }
 
-.wrapper-dropdown-5 .dropdown li {
+.rp-dropdown .dropdown li {
     padding: 0 10px;
 }
 
-.wrapper-dropdown-5 .dropdown li a {
+.rp-dropdown .dropdown li a {
     display: block;
     text-decoration: none;
     color: #757575;
@@ -327,11 +327,11 @@ body {
     border-bottom: 1px solid #e6e8ea;
 }
 
-.wrapper-dropdown-5 .dropdown li:last-of-type a {
+.rp-dropdown .dropdown li:last-of-type a {
     border: none;
 }
 
-.wrapper-dropdown-5 .dropdown li i {
+.rp-dropdown .dropdown li i {
     margin-right: 5px;
     color: inherit;
     vertical-align: middle;
@@ -339,27 +339,28 @@ body {
 
 /* Hover state */
 
-.wrapper-dropdown-5 .dropdown li:hover a {
+.rp-dropdown .dropdown li:hover a {
     color: #57a9d9;
 }
 
 /* Active state */
 
-.wrapper-dropdown-5:focus,
-.wrapper-dropdown-5:active {
+.rp-dropdown:focus,
+.rp-dropdown:active {
     background: #4cbeff;
     box-shadow: none;
     border-bottom: none;
     color: white;
 }
 
-.wrapper-dropdown-5:focus:after,
-.wrapper-dropdown-5:active:after {
+.rp-dropdown:focus:after,
+.rp-dropdown:active:after {
     border-color: #82d1ff transparent;
 }
 
-.wrapper-dropdown-5:focus .dropdown,
-.wrapper-dropdown-5:active .dropdown {
+.rp-dropdown:focus .dropdown,
+.rp-dropdown:active .dropdown {
+    z-index: 5;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     max-height: 400px;
 }
