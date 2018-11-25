@@ -266,6 +266,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-wrap: nowrap;
+    padding: 0 2rem;
 }
 
 .overflow_x_container .btn_left,
@@ -438,6 +439,13 @@ body {
     color: #F44336 !important;
     caret-color: #F44336 !important;
     border-color: #F44336 !important;
+}
+
+.transparent {
+    background-color: transparent !important;
+    color: transparent !important;
+    caret-color: transparent !important;
+    border-color: transparent !important;
 }
 
 /* kdksdk */
