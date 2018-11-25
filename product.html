@@ -138,12 +138,12 @@
         <figure class="rp_swing_box suo_animation">
             <img class="rp_suo" src="img/base/suo.png">
         </figure>
-        <div class="rp_header active">
-            <div>
+        <div id="js_header" class="rp_header">
+            <div class="">
                 <img src="img/base/royal-panda.png">
             </div>
-            <div>
-                <img src="img/base/panda.png">
+            <div class="rp_panda_logo">
+                <img id="js_pandaImage" src="img/base/panda.png">
             </div>
         </div>
         <div class="container-fluid">
@@ -365,7 +365,8 @@
 
 <script>
     'use strict';
-    var el_productListBox = document.querySelector('#js_product_list_box'),
+    var el_header = document.querySelector('#js_header'),
+        el_productListBox = document.querySelector('#js_product_list_box'),
         el_helpButtons = document.querySelector('#js_help_button'),
         el_helpInfos = document.querySelectorAll('.js_question_info');
 
@@ -434,6 +435,10 @@
             $(el_helpButtons).removeClass("hidden");
             $(el_helpButtons).addClass("animated zoomIn");
         }, (1650));
+    });
+
+    $('#js_pandaImage').on('click', function () {
+        $(el_header).toggleClass('active');
     });
 </script>
 
