@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
     <link href="css/animation.css" rel="stylesheet" type="text/css">
-    <link href="css/flexboxgrid.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
@@ -21,20 +21,53 @@
 
         .overflow_x_container{
             display: flex;
-            position: relative; 
-            flex-wrap: nowrap; 
+            justify-content: center;
+            padding: 0 4rem;
+            position: relative;
+        }
+        .overflow_x_container:before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 2rem;
+            top: 0;
+            bottom:0;
+            left: 3.5rem;
+            box-shadow: inset 50px 0 25px -25px #fcf1ef;
+            z-index: 3;
+        }
+        .overflow_x_container:after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 2rem;
+            top: 0;
+            bottom:0;
+            right: 3.5rem;
+            box-shadow: inset -50px 0 25px -25px #fcf1ef;
+            z-index: 3;
+        }
+        
+        .overflow_x_container .slider {
             overflow-x: hidden;
-            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: nowrap;
+        } 
+     
+
+        .overflow_x_container .btn_left,
+        .overflow_x_container .btn_right {
+            z-index: 3;
         }
 
         .rp_product_box{
-            width: 220px;
-            padding: 0.75rem 1.5rem;
+            min-width: 260px;
+            width: 260px;
+            padding: 1.5rem;
             line-height: 1.5;
         }
 
         .rp_product_box .rp_product_card{
-
         }
 
         .rp_product_card:hover,
@@ -44,6 +77,16 @@
             border-color: #fff;
             box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
            
+        }
+
+        .rp_product_card--media{
+            max-height: 240px;;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rp_product_card--media img{
+            height:220px;
         }
     </style>
 </head>
@@ -61,11 +104,10 @@
                 <img src="img/base/panda.png">
             </div>
         </div>
-
-        <div class="rp_content_box">
-            <div class="rp_toolbox">
+        <div class="container-fluid">
+            <div class="rp_toolbox mt-3 ">
                 <div class="row px-3">
-                    <div class="col-xs-4 col-md-3 col-lg filter_box">
+                    <div class="col-sm-4 col-lg filter_box">
                         <div class="wrapper-dropdown-5" tabindex="1">品牌牌子
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
@@ -74,7 +116,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-md-3 col-lg filter_box">
+                    <div class="col-sm-4 col-lg filter_box">
                         <div class="wrapper-dropdown-5" tabindex="2">全部分类
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
@@ -83,7 +125,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-md-3 col-lg filter_box">
+                    <div class="col-sm-4 col-lg filter_box">
                         <div class="wrapper-dropdown-5" tabindex="3">宝贝年龄
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
@@ -92,7 +134,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-md-3 col-lg filter_box">
+                    <div class="col-sm-4 col-lg filter_box">
                         <div class="wrapper-dropdown-5" tabindex="4">产品材料
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
@@ -101,7 +143,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-md-3 col-lg filter_box">
+                    <div class="col-sm-4 col-lg filter_box">
                         <div class="wrapper-dropdown-5" tabindex="5">新品发布
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
@@ -110,7 +152,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-md-3 col-lg filter_box">
+                    <div class="col-sm-4 col-lg filter_box">
                         <div class="wrapper-dropdown-5" tabindex="1">热卖产品
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
@@ -119,7 +161,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-md-3 col-lg filter_box">
+                    <div class="col-sm-4 col-lg filter_box">
                         <div class="wrapper-dropdown-5" tabindex="1">排序
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
@@ -137,63 +179,91 @@
             <div class="rp_divider"></div>
 
             <!--  products -->
-            <div id="js_product_list_box" class="overflow_x_container">
-                <button type="button" id="js_btn_left" class="rp_btn outline rp_btn--icon accent" style="position: absolute; left:0; top: calc(50% - 54px);">
+            <div class="overflow_x_container">
+                <button type="button" id="js_btn_left" class="rp_btn outline rp_btn--icon accent btn_left" style="position: absolute; left:0; top: calc(50% - 54px);">
                     <i class="fas fa-angle-left grey--text"></i>
                 </button>
-                <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent" style="position: absolute; right:0; top: calc(50% - 54px);">
+                <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent btn_right" style="position: absolute; right:0; top: calc(50% - 54px);">
                     <i class="fas fa-angle-right grey--text"></i>
                 </button>
-                <div class="rp_product_box">
-                    <div class="rp_product_card">
-                        <div class="rp_card flat">
-                            <div class="rp_product_card--media pa-3" style="max-height: 220px;">
-                                <img class="media" src="img/products/abott.png" style="max-height: 200px;">
+                <div id="js_product_list_box" class="slider">
+                    <div class="rp_product_box">
+                        <div class="rp_product_card">
+                            <div class="rp_card flat">
+                                <div class="rp_product_card--media pa-3">
+                                    <img class="media" src="img/products/abott.png">
+                                </div>
                             </div>
+                            <div class="rating"></div>
+                            <div class="font_title">Abott</div>
+                            <div class="font_subheading">新生儿配方液态奶</div>
+                            <div class="accent--text">170元</div>
                         </div>
-                        <div class="rating"></div>
-                        <div class="font_title">Abott</div>
-                        <div class="font_subheading">新生儿配方液态奶</div>
-                        <div class="accent--text">170元</div>
                     </div>
-                </div>
-                <div class="rp_product_box">
-                    <div class="rp_product_card">
-                        <div class="rp_card flat">
-                            <div class="rp_product_card--media pa-3" style="max-height: 220px;">
-                                <img class="media" src="img/products/hegen.png" style="max-height: 200px;">
+                    <div class="rp_product_box">
+                        <div class="rp_product_card">
+                            <div class="rp_card flat">
+                                <div class="rp_product_card--media pa-3">
+                                    <img class="media" src="img/products/hegen.png">
+                                </div>
                             </div>
+                            <div class="rating"></div>
+                            <div class="font_title">Hegen</div>
+                            <div class="font_subheading">婴孩多功能奶瓶</div>
+                            <div class="accent--text">170元</div>
                         </div>
-                        <div class="rating"></div>
-                        <div class="font_title">Hegen</div>
-                        <div class="font_subheading">婴孩多功能奶瓶</div>
-                        <div class="accent--text">170元</div>
                     </div>
-                </div>
-                <div class="rp_product_box">
-                    <div class="rp_product_card">
-                        <div class="rp_card flat">
-                            <div class="rp_product_card--media pa-3" style="max-height: 220px;">
-                                <img class="media" src="img/products/hipp.png" style="max-height: 200px;">
+                    <div class="rp_product_box">
+                        <div class="rp_product_card">
+                            <div class="rp_card flat">
+                                <div class="rp_product_card--media pa-3">
+                                    <img class="media" src="img/products/hipp.png">
+                                </div>
                             </div>
+                            <div class="rating"></div>
+                            <div class="font_title">HiPP</div>
+                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
+                            <div class="accent--text">170元</div>
                         </div>
-                        <div class="rating"></div>
-                        <div class="font_title">HiPP</div>
-                        <div class="font_subheading">免敏抗敏婴孩奶粉</div>
-                        <div class="accent--text">170元</div>
                     </div>
-                </div>
-                <div class="rp_product_box">
-                    <div class="rp_product_card">
-                        <div class="rp_card flat">
-                            <div class="rp_product_card--media pa-3" style="max-height: 220px;">
-                                <img class="media" src="img/products/hipp.png" style="max-height: 200px;">
+                    <div class="rp_product_box">
+                        <div class="rp_product_card">
+                            <div class="rp_card flat">
+                                <div class="rp_product_card--media pa-3">
+                                    <img class="media" src="img/products/hipp.png">
+                                </div>
                             </div>
+                            <div class="rating"></div>
+                            <div class="font_title">HiPP</div>
+                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
+                            <div class="accent--text">170元</div>
                         </div>
-                        <div class="rating"></div>
-                        <div class="font_title">HiPP</div>
-                        <div class="font_subheading">免敏抗敏婴孩奶粉</div>
-                        <div class="accent--text">170元</div>
+                    </div>
+                    <div class="rp_product_box">
+                        <div class="rp_product_card">
+                            <div class="rp_card flat">
+                                <div class="rp_product_card--media pa-3">
+                                    <img class="media" src="img/products/hipp.png">
+                                </div>
+                            </div>
+                            <div class="rating"></div>
+                            <div class="font_title">HiPP</div>
+                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
+                            <div class="accent--text">170元</div>
+                        </div>
+                    </div>
+                    <div class="rp_product_box">
+                        <div class="rp_product_card">
+                            <div class="rp_card flat">
+                                <div class="rp_product_card--media pa-3">
+                                    <img class="media" src="img/products/hipp.png">
+                                </div>
+                            </div>
+                            <div class="rating"></div>
+                            <div class="font_title">HiPP</div>
+                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
+                            <div class="accent--text">170元</div>
+                        </div>
                     </div>
                 </div>
             </div>
