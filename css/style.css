@@ -267,6 +267,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     padding: 0 2rem;
+    width: 100%;
 }
 
 .overflow_x_container .btn_left,

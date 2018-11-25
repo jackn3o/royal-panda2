@@ -14,27 +14,53 @@
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <style>
         .rp_product_detail_box{
-            max-height: 500px;      
-            min-width: 240px;
+            max-height: 560px;     
+            min-width: 400px; 
+            display: flex;
+            position: relative;
         }
 
-        .rp_card--media{
+        .rp_product_detail_box:before{
+            content: '';
+            position: absolute;
+            bottom: 2.5rem;
+            left:0;
+            right:0;
+            height:12px;
+            background-color: #faba15;
+        }
+
+        .rp_product_detail_box  .rp_card--media{
+            height:100%;
+            align-items: flex-end;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
-        }
-        .rp_product_detail_box .rp_card--media .media{
-            opacity: 1;
-            transform: scale(0.2);
-            transition: all 250ms ease-in;
-            -webkit-transform: scale(0.2);
-            -webkit-transition: all 250ms ease-in;
-            -ms-transform: scale(0.2);
-            -moz-transition: all 250ms ease-in;
-            -moz-transform: scale(0.2);
+            display: flex;
+            align-items:flex-end;
+            padding:1rem;
         }
 
-                .rp_product_detail_box .rp_card--media .media:hover{
+        .rp_product_detail_box .rp_card--media .media{
+            max-height: 520px;
+            max-width: 260px;
+            opacity: 1;
+            transform: scale(0.4);
+            transition: all 250ms ease-in;
+            -webkit-transform: scale(0.4);
+            -webkit-transition: all 250ms ease-in;
+            -ms-transform: scale(0.4);
+            -moz-transition: all 250ms ease-in;
+            -moz-transform: scale(0.4);
+            -webkit-transform-origin : 50% 100%;
+            -moz-transform-origin : 50% 100%;
+            -o-transform-origin : 50% 100%;
+            -ms-transform-origin : 50% 100%;
+            transform-origin : 50% 100%;
+        }
+
+        .rp_product_detail_box.active .rp_card--media .media, 
+        .rp_product_detail_box .rp_card--media .media:hover{
             opacity: 1;
             transform: scale(1);
             transition: all 250ms ease-in;
@@ -51,6 +77,12 @@
             width: 100%; 
             max-width: 920px;
         }
+
+        .slider .empty_placeholder {
+           min-width: 50%;
+        }
+
+       
     </style>
 </head>
 
@@ -64,7 +96,6 @@
                 <img src="img/base/royal-panda.png">
             </div>
             <div id="js_pandaImage" class="rp_panda_logo">
-                <!-- src="img/base/panda.png" -->
             </div>
         </div>
         <div class="container-fluid mt-3">
@@ -76,101 +107,57 @@
                 <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent btn_right" style="position: absolute; right:0; top: calc(50% - 54px);">
                     <i class="fas fa-angle-right grey--text"></i>
                 </button>
-                <div id="js_product_list_box" class="slider">
-                    <div class="rp_product_detail_box">
-                        <div class="rp_card flat transparent">
+                <div id="js_product_list_box" class="slider product_detail_slider">
+                    <div class="empty_placeholder"></div>
+                    <div class="rp_product_detail_box js_product_detail_box active">
+                        <div class="rp_card flat transparent flex-sm-fill">
                             <div class="rp_card--media">
-                                <img class="media" src="img/products/abott.png">
+                                <img class="media" src="img/product-detail/hegen-main.png">
                             </div>
                         </div>
-                        <div class="rating"></div>
-                        <div class="font_title">Abott</div>
-                        <div class="font_subheading">新生儿配方液态奶</div>
-                        <div class="accent--text">170元</div>
                     </div>
-                    <div class="rp_product_box">
-                        <div class="rp_product_card--reveal"></div>
-                        <div class="rp_product_card">
-                            <div class="rp_card flat">
-                                <div class="rp_product_card--media pa-3">
-                                    <img class="media" src="img/products/hegen.png">
-                                </div>
+                    <div class="rp_product_detail_box js_product_detail_box">
+                        <div class="rp_card flat transparent flex-sm-fill">
+                            <div class="rp_card--media">
+                                <img class="media" src="img/product-detail/hegen-1.png">
                             </div>
-                            <div class="rating"></div>
-                            <div class="font_title">Hegen</div>
-                            <div class="font_subheading">婴孩多功能奶瓶</div>
-                            <div class="accent--text">170元</div>
                         </div>
                     </div>
-                    <div class="rp_product_box">
-                        <div class="rp_product_card--reveal"></div>
-                        <div class="rp_product_card">
-                            <div class="rp_card flat">
-                                <div class="rp_product_card--media pa-3">
-                                    <img class="media" src="img/products/hipp.png">
-                                </div>
+                    <div class="rp_product_detail_box js_product_detail_box">
+                        <div class="rp_card flat transparent flex-sm-fill">
+                            <div class="rp_card--media">
+                                <img class="media" src="img/product-detail/hegen-2.png">
                             </div>
-                            <div class="rating"></div>
-                            <div class="font_title">HiPP</div>
-                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
-                            <div class="accent--text">170元</div>
                         </div>
                     </div>
-                    <div class="rp_product_box">
-                        <div class="rp_product_card--reveal"></div>
-                        <div class="rp_product_card">
-                            <div class="rp_card flat">
-                                <div class="rp_product_card--media pa-3">
-                                    <img class="media" src="img/products/hipp.png">
-                                </div>
-                            </div>
-                            <div class="rating"></div>
-                            <div class="font_title">HiPP</div>
-                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
-                            <div class="accent--text">170元</div>
-                        </div>
-                    </div>
-                    <div class="rp_product_box">
-                        <div class="rp_product_card--reveal"></div>
-                        <div class="rp_product_card">
-                            <div class="rp_card flat">
-                                <div class="rp_product_card--media pa-3">
-                                    <img class="media" src="img/products/hipp.png">
-                                </div>
-                            </div>
-                            <div class="rating"></div>
-                            <div class="font_title">HiPP</div>
-                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
-                            <div class="accent--text">170元</div>
-                        </div>
-                    </div>
-                    <div class="rp_product_box">
-                        <div class="rp_product_card--reveal"></div>
-                        <div class="rp_product_card">
-                            <div class="rp_card flat">
-                                <div class="rp_product_card--media pa-3">
-                                    <img class="media" src="img/products/hipp.png">
-                                </div>
-                            </div>
-                            <div class="rating"></div>
-                            <div class="font_title">HiPP</div>
-                            <div class="font_subheading">免敏抗敏婴孩奶粉</div>
-                            <div class="accent--text">170元</div>
-                        </div>
-                    </div>
+                    <div class="empty_placeholder"></div>
                 </div>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center align-items-center mt-5">
                 <div class="rp_product_description_box">
-                    <div>HEGEN</div>
+                    <div style="font-weight: 300; font-size: 1.5rem;">HEGEN</div>
                     <div>
-                        <div>婴儿多功能PPSU奶瓶</div>
-                        <div class="row">
-
+                        <div style="font-weight: 500; font-size: 2rem;"> 婴儿多功能PPSU奶瓶</div>
+                        <div class="row justify-content-around mt-3">
+                            <button type="button" class="rp_btn outline rp_btn--icon accent">
+                                <i class="fas fa-angle-left grey--text"></i>
+                            </button>
+                            <button type="button" class="rp_btn outline rp_btn--icon accent">
+                                <i class="fas fa-angle-left grey--text"></i>
+                            </button>
+                            <button type="button" class="rp_btn outline rp_btn--icon accent">
+                                <i class="fas fa-angle-left grey--text"></i>
+                            </button>
+                            <button type="button" class="rp_btn outline rp_btn--icon accent">
+                                <i class="fas fa-angle-left grey--text"></i>
+                            </button>
+                            <button type="button" class="rp_btn outline rp_btn--icon accent">
+                                <i class="fas fa-angle-left grey--text"></i>
+                            </button>
                         </div>
                     </div>
-                    <div>238 元</div>
+                    <div style="font-weight: 300; font-size: 1.5rem;">238 元</div>
                 </div>
             </div>
         </div>
@@ -180,7 +167,8 @@
 <script>
     'use strict';
     var el_header = document.querySelector('#js_header'),
-        el_productListBox = document.querySelector('#js_product_list_box');
+        el_productListBox = document.querySelector('#js_product_list_box'),
+        el_productDetails = document.querySelectorAll('.js_product_detail_box');
 
     var fn_scrollTo = function (element, scrollPixels, duration) {
         var scrollPos = element.scrollLeft;
@@ -215,12 +203,34 @@
     };
 
     var fn_swipeLeft = function () {
-        fn_scrollTo(el_productListBox, -400, 600);
+        fn_scrollTo(el_productListBox, -fn_getSlidingWidth(false), 600);
     };
 
     var fn_swipeRight = function () {
-        fn_scrollTo(el_productListBox, 400, 600);
+
+        fn_scrollTo(el_productListBox, fn_getSlidingWidth(true), 600);
     };
+
+    var fn_getSlidingWidth = function (isNext) {
+        var el_currentActive = document.querySelector('.js_product_detail_box.active'),
+            el_nextActive = null;
+
+        if (isNext) {
+            el_nextActive = el_currentActive.nextElementSibling;
+        } else {
+            el_nextActive = el_currentActive.previousElementSibling;
+        }
+
+        $(el_currentActive).removeClass('active');
+        $(el_nextActive).addClass('active');
+
+        var nb_scrollTo = 0;
+        if (el_currentActive.clientWidth) {
+            nb_scrollTo = el_currentActive.clientWidth;
+        }
+
+        return nb_scrollTo
+    }
 
     $('#js_btn_left').on('click', function () {
         fn_swipeLeft();
@@ -233,6 +243,35 @@
     $('#js_pandaImage').on('click', function () {
         $(el_header).toggleClass('active');
     });
+
+    $(el_productListBox).on('click', '.js_product_detail_box', function () {
+        var el_selectedDetail = this,
+            el_previousActive = el_productListBox.querySelector('.js_product_detail_box.active');
+
+        $(el_productDetails).removeClass('active');
+        $(el_selectedDetail).addClass('active');
+
+
+        var nb_scrollTo = 0;
+        if (el_selectedDetail.offsetLeft && el_previousActive.offsetLeft) {
+            nb_scrollTo = el_selectedDetail.offsetLeft - el_previousActive.offsetLeft
+        }
+
+        fn_scrollTo(el_productListBox, nb_scrollTo, 600);
+    });
+
+    var fn_init = function () {
+        var el_currentActive = document.querySelector('.js_product_detail_box.active'),
+            nb_scrollTo = 0;
+        if (js_product_list_box.scrollWidth && el_currentActive.clientWidth) {
+            nb_scrollTo = el_currentActive.clientWidth / 2
+        }
+
+        fn_scrollTo(el_productListBox, nb_scrollTo, 600);
+    };
+
+
+    fn_init()
 </script>
 
 </html>
