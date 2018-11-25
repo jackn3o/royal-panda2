@@ -231,10 +231,36 @@ body {
     transition: .3s cubic-bezier(.25, .8, .5, 1), color 1ms;
 }
 
+.rp_btn:before {
+    border-radius: inherit;
+    color: inherit;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    opacity: .12;
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    width: 100%;
+}
+
+.rp_btn:hover:before {
+    background-color: currentColor;
+}
+
+.rp_btn:active:before {
+    opacity: .3;
+    background-color: currentColor;
+}
+
 .rp_btn--icon {
     border-radius: 50%;
     min-width: 36px;
     width: 36px;
+}
+
+.rp_btn.round {
+    border-radius: 12px;
 }
 
 .rp_btn--icon .fas {
@@ -242,18 +268,33 @@ body {
 }
 
 .rp_btn.outline {
+    border: 2px solid;
+}
+
+.rp_btn.rp_btn--icon.outline {
     border: 3px solid;
+}
+
+.rp_btn.large {
+    height: 42px;
+    min-width: 42px;
 }
 
 .rp_btn.small {
     height: 30px;
-    width: 30px;
+    min-width: 30px;
 }
 
 .rp_btn.accent {
     color: #faba15 !important;
     caret-color: #faba15 !important;
     border-color: #faba15 !important;
+}
+
+.rp_btn.error {
+    color: #F44336 !important;
+    caret-color: #F44336 !important;
+    border-color: #F44336 !important;
 }
 
 /* kdksdk */
