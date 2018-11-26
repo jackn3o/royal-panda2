@@ -40,6 +40,40 @@
             align-items:flex-end;
             padding:1rem;
         }
+        .rp_product_detail_box  .rp_card--media .dot{
+            position: absolute;
+            height: 1.5em;
+            width: 1.5rem;
+            background-color: #faba15;
+            border-radius: 50%;
+
+            box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12) !important;
+        }
+
+        .rp_product_detail_box .rp_card--media .dot:hover{
+        }
+
+        .rp_product_detail_box  .rp_card--media .dot:hover:after{
+            content:attr(data-text);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            min-width: 40px;
+            max-width: 180px;
+            min-height: 30px;
+            color:rgba(0, 0, 0, .84);
+            border:1px solid #faba15;
+            border-radius: 12px;
+            padding: .5rem  .75rem;
+            transition: .45s cubic-bezier(.25, .8, .5, 1);
+        }
+
+        
+        .rp_product_detail_box  .rp_card--media .dot[data-tooltip="left"]:hover:after{
+            top:-10px;
+            left:-180px;
+        }
 
         .rp_product_detail_box .rp_card--media .media{
             max-height: 520px;
@@ -57,6 +91,7 @@
             -o-transform-origin : 50% 100%;
             -ms-transform-origin : 50% 100%;
             transform-origin : 50% 100%;
+            overflow: hidden;
         }
 
         .rp_product_detail_box.active .rp_card--media .media, 
@@ -113,6 +148,10 @@
                         <div class="rp_card flat transparent flex-sm-fill">
                             <div class="rp_card--media">
                                 <img class="media" src="img/product-detail/hegen-main.png">
+                                <div class="dot" data-text="可搭配不同的配件" data-tooltip="left" style="left: 20%; top: 33%;"></div>
+                                <div class="dot" style="left: 24%; top: 60%;"></div>
+                                <div class="dot" style="right: 22%; top: 38%;"></div>
+                                <div class="dot" style="right: 26%; bottom: 13%;"></div>
                             </div>
                         </div>
                     </div>

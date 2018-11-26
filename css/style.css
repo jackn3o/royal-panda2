@@ -193,7 +193,6 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    overflow: hidden;
     flex: 1 0 auto;
     transition: all 0.2s ease-in-out 0.05s;
 }
@@ -333,7 +332,6 @@ body {
 
 .rp_product_card--media {
     max-height: 240px;
-    ;
     display: flex;
     justify-content: center;
     align-items: center;
