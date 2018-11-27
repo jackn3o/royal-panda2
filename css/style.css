@@ -40,33 +40,94 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
+    width: 100%;
+    padding: 2rem 0 0;
     transition: all 0.25s linear 0s;
-    height: 12rem;
+    min-height: 12.5rem;
     z-index: 6;
 }
 
-.rp_header.active {
-    background-color: #f2dbcf;
+.rp_header_trigger_box {
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header {
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
 }
 
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header[data-category='1'] {
+    background-color: #e3e3e3;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header[data-category='2'] {
+    background-color: #e3e7ea;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header[data-category='3'] {
+    background-color: #f4c7c4;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header[data-category='4'] {
+    background-color: #fff1ca;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header[data-category='5'] {
+    background-color: #f8f2e4;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header[data-category='6'] {
+    background-color: #d4edf4;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header .rp_category_box {
+    display: flex;
+}
+
+.rp_header_trigger_box .rp_category_trigger:checked~.rp_header .rp_panda_logo {
+    display: none;
+}
+
+.rp_category_box {
+    justify-content: space-around;
+    width: 100%;
+    max-width: 960px;
+    height: 65px;
+    display: none;
+}
+
+.rp_category_box .rp_btn {
+    background: transparent;
+    color: #b0a098;
+}
+
+.rp_category_box .rp_btn.active {
+    background: #ffdf62;
+    color: #fff;
+    border-radius: 6px;
+}
+
 .rp_panda_logo {
-    width: 80px;
-    height: 100px !important;
+    width: 50px !important;
+    height: 100px;
     background-image: url("../img/base/panda.png");
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    background-position: top left;
+    background-size: 44px 20px;
+    padding-right: 4px;
 }
 
 .rp_panda_logo:hover {
-    width: 80px;
-    height: 100px !important;
+    width: 50px !important;
+    height: 100px;
     background-image: url("../img/base/panda.gif");
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    background-position: top left;
+    background-size: 50px 45px;
 }
 
 .rp_content_title {
@@ -371,6 +432,7 @@ body {
     background-color: transparent;
     color: inherit;
     min-width: 4rem;
+    border-width: 0;
     transition: .3s cubic-bezier(.25, .8, .5, 1), color 1ms;
 }
 
@@ -394,6 +456,12 @@ body {
 .rp_btn:active:before {
     opacity: .3;
     background-color: currentColor;
+}
+
+.rp_btn.flat {
+    color: #0e1317 !important;
+    caret-color: transparent !important;
+    border-color: transparent !important;
 }
 
 .rp_btn--icon {
@@ -421,6 +489,8 @@ body {
 .rp_btn.large {
     height: 42px;
     min-width: 42px;
+    font-size: 1.2rem;
+    line-height: 1.1;
 }
 
 .rp_btn.small {
