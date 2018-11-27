@@ -20,6 +20,10 @@
             position: relative;
         }
 
+          /* .rp_product_detail_box.wide{
+            min-width: 960px; 
+        } */
+
         .rp_product_detail_box:before{
             content: '';
             position: absolute;
@@ -75,8 +79,6 @@
             transition: .45s cubic-bezier(.25, .8, .5, 1);
         }
 
-
-
         .rp_product_detail_box  .rp_card--media .dot:hover:after{
             content:attr(data-text);
             position: absolute;
@@ -93,7 +95,6 @@
             transition: .45s cubic-bezier(.25, .8, .5, 1);
         }
 
-        
         .rp_product_detail_box  .rp_card--media .dot[data-tooltip="left"]:hover:after{
             top:-10px;
             left:-180px;
@@ -101,6 +102,7 @@
 
         .rp_product_detail_box .rp_card--media .media{
             max-height: 520px;
+            min-height: 300px;
             max-width: 260px;
             opacity: 1;
             transform: scale(0.4);
@@ -116,6 +118,11 @@
             -ms-transform-origin : 50% 100%;
             transform-origin : 50% 100%;
             overflow: hidden;
+        }
+
+          .rp_product_detail_box.wide .rp_card--media .media{
+            min-width: 920px;
+            min-height: 450px;
         }
 
         .rp_product_detail_box.active .rp_card--media .media, 
@@ -140,8 +147,6 @@
         .slider .empty_placeholder {
            min-width: 50%;
         }
-
-       
     </style>
 </head>
 
@@ -154,8 +159,7 @@
             <div class="">
                 <img src="img/base/royal-panda.png">
             </div>
-            <div id="js_pandaImage" class="rp_panda_logo">
-            </div>
+            <div id="js_pandaImage" class="rp_panda_logo"></div>
         </div>
         <div class="container-fluid mt-3">
             <!--  products -->
@@ -190,6 +194,13 @@
                         <div class="rp_card flat transparent flex-sm-fill">
                             <div class="rp_card--media">
                                 <img class="media" src="img/product-detail/hegen-2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rp_product_detail_box wide js_product_detail_box">
+                        <div class="rp_card flat transparent flex-sm-fill">
+                            <div class="rp_card--media">
+                                <img class="media" src="img/product-detail/hegen-3.png">
                             </div>
                         </div>
                     </div>
