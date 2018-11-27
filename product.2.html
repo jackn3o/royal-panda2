@@ -23,23 +23,20 @@
         <figure class="rp_swing_box suo_animation">
             <img class="rp_suo" src="img/base/suo.png">
         </figure>
-        <label class="rp_header_trigger_box" for="js_category_trigger">
-            <input type="checkbox" id="js_category_trigger" class="rp_category_trigger" hidden>
-            <div id="js_header" class="rp_header" data-category="3">
-                <div class="mb-3">
-                    <img src="img/base/royal-panda.png">
-                </div>
-                <div id="js_pandaImage" class="rp_panda_logo"></div>
-                <div class="rp_category_box">
-                    <button type="button" class="rp_btn flat large">出行工具</button>
-                    <button type="button" class="rp_btn flat large">奶粉辅食</button>
-                    <button type="button" class="rp_btn flat large active">喂养餐具</button>
-                    <button type="button" class="rp_btn flat large">尿布服饰</button>
-                    <button type="button" class="rp_btn flat large">家居用品</button>
-                    <button type="button" class="rp_btn flat large">玩具学习</button>
-                </div>
+        <div id="js_header" class="rp_header" data-category="3">
+            <div>
+                <img src="img/base/royal-panda.png">
             </div>
-        </label>
+            <div id="js_pandaImage" class="rp_panda_logo"></div>
+            <div class="rp_category_box">
+                <a href="./product.html" class="rp_btn flat large">出行工具</a>
+                <a href="./product.1.html" class="rp_btn flat large">奶粉辅食</a>
+                <a href="#" class="rp_btn flat large active">喂养餐具</a>
+                <a href="./product.3.html" class="rp_btn flat large">尿布服饰</a>
+                <a href="./product.4.html" class="rp_btn flat large">家居用品</a>
+                <a href="./product.5.html" class="rp_btn flat large">玩具学习</a>
+            </div>
+        </div>
         <div class="container-fluid">
             <div class="rp_toolbox mt-3 ">
                 <div class="row px-3">
@@ -331,6 +328,10 @@
             $(el_helpButtons).removeClass("hidden");
             $(el_helpButtons).addClass("animated zoomIn");
         }, (1650));
+    });
+
+    $('#js_pandaImage').on('click', function () {
+        $(el_header).toggleClass('active')
     });
 
 </script>
