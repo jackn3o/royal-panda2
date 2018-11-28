@@ -62,53 +62,84 @@ body {
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
 }
 
+/* 家居用品 */
 
 body[data-category='1'] .inner_body {
-    background-color: #e3e3e3;
-}
-
-body[data-category='1'] .rp_header.active {
-    background-color: #d9d7d7;
-}
-
-body[data-category='2'] .inner_body {
-    background-color: #e3e7ea;
-}
-
-body[data-category='2'] .rp_header.active {
-    background-color: #d9e3ea;
-}
-
-body[data-category='3'] .inner_body {
-    background-color: #f4d0ce;
-}
-
-body[data-category='3'] .rp_header.active {
-    background-color: #f4c7c4;
-}
-
-body[data-category='4'] .inner_body {
-    background-color: #fff1ca;
-}
-
-body[data-category='4'] .rp_header.active {
-    background-color: #ffeebf;
-}
-
-body[data-category='5'] .inner_body {
     background-color: #f8f2e4;
 }
 
-body[data-category='5'] .rp_header.active {
+body[data-category='1'] .rp_header.active {
     background-color: #f8eed8;
 }
 
-body[data-category='6'] .inner_body {
+/* 玩具学习 */
+
+body[data-category='2'] .inner_body {
     background-color: #d4edf4;
 }
 
-body[data-category='6'] .rp_header.active {
+body[data-category='2'] .rp_header.active {
     background-color: #c8eaf4;
+}
+
+/* 出行工具 */
+
+body[data-category='3'] .inner_body {
+    background-color: #e3e3e3;
+}
+
+body[data-category='3'] .rp_header.active {
+    background-color: #d9d7d7;
+}
+
+/* 洗护保洁 */
+
+body[data-category='4'] .inner_body {
+    background-color: #ffffff;
+}
+
+body[data-category='4'] .rp_header.active {
+    background-color: #f2f2f2;
+}
+
+/* 电器安防 */
+
+body[data-category='5'] .inner_body {
+    background-color: #e0d7ce;
+}
+
+body[data-category='5'] .rp_header.active {
+    background-color: #e1d3c6;
+}
+
+/* 尿布服饰 */
+
+body[data-category='6'] .inner_body {
+    background-color: #fff1ca;
+}
+
+body[data-category='6'] .rp_header.active {
+    background-color: #ffeebf;
+}
+
+/* 喂养餐具 */
+
+body[data-category='7'] .inner_body {
+    background-color: #f4d0ce;
+}
+
+body[data-category='7'] .rp_header.active {
+    background-color: #f4c7c4;
+}
+
+/* 奶粉辅食 */
+
+body[data-category='8'] .inner_body {
+    background-color: #e3e7ea;
+}
+
+body[data-category='8'] .rp_header.active {
+    background-color: #d9e3ea;
 }
 
 .rp_header.active .rp_category_box {
@@ -327,6 +358,7 @@ body[data-category='6'] .rp_header.active {
 }
 
 /* todo fix later */
+
 /* .overflow_x_container:before {
     content: "";
     position: absolute;
@@ -539,7 +571,6 @@ body[data-category='6'] .rp_header.active {
     border-color: #F44336;
 }
 
-
 /* kdksdk */
 
 .rp-dropdown {
@@ -666,7 +697,6 @@ body[data-category='6'] .rp_header.active {
     .rp_content_box {
         max-width: 1185px;
     }
-
     .hiddenMdAndUp {
         display: none;
         flex: 0;

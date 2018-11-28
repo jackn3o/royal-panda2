@@ -13,110 +13,29 @@
         crossorigin="anonymous">
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <style>
-        .rp_suo_menu{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height:65vh;
-            margin-top:2rem;
-            }
-        .rp_suo_menu.active  .suo_menu_icon{
-            opacity: 1;
-            transform: scale(1);
-            transition: all 250ms ease-in;
-            -webkit-transform: scale(1);
-            -webkit-transition: all 250ms ease-in;
-            -ms-transform: scale(1);
-            -moz-transition: all 250ms ease-in;
-            -moz-transform: scale(1);
-        }
 
-        .rp_suo_menu .suo_menu_icon{
-            width: 4rem;
-            height: 4rem;
-            margin-top: 1.5rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity:0;
-            -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(0);
-            -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(0);
-            -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(0);
-            transition: all 200ms ease-in;
-            transform: scale(0);
-        }
-        .overlay {
-            position: fixed;
-            background-color: rgba(255,255,255, .5);
-            top:0;
-            left:0;
-            bottom:0;
-            right: 0;
-            z-index:6;
-            opacity:0;
-            transition: .3s cubic-bezier(.25, .8, .5, 1);
-        }
-        .overlay.active {
-            opacity:1;
-        }
-        .suo_menu_icon.huiyuan{
-            background-image: url('./img/base/huiyuan.png');
-        }
-        .suo_menu_icon.huiyuan:hover{
-            background-image: url('./img/base/huiyuan_hover.png');
-        }
 
-        .suo_menu_icon.cart{
-            background-image: url('./img/base/cart.png');
-        }
-        .suo_menu_icon.cart:hover{
-            background-image: url('./img/base/cart_hover.png');
-        }
-        .suo_menu_icon.kefu{
-            background-image: url('./img/base/kefu.png');
-        }
-        .suo_menu_icon.kefu:hover{
-            background-image: url('./img/base/kefu_hover.png');
-        }
-        .suo_menu_icon.order{
-            background-image: url('./img/base/order.png');
-        }
     </style>
 </head>
 
-<body data-category="1">
-    <div id="js_overlay" class="overlay"></div>
-    <div class="rp_swing_box">
-        <figure class="suo_animation">
-            <img id="js_suoMenuTrigger" class="rp_suo" src="img/base/suo.png">
-        </figure>
-        <figure id="js_suo_menu" class="rp_suo_menu">
-            <div class="suo_menu_icon huiyuan"></div>
-            <div class="suo_menu_icon cart"></div>
-            <div class="suo_menu_icon kefu"></div>
-            <div style="flex:1;"></div>
-            <div class="suo_menu_icon order"></div>
-        </figure>
-    </div>
-
+<body data-category="7">
+    <figure class="rp_swing_box suo_animation">
+        <img class="rp_suo" src="img/base/suo.png">
+    </figure>
     <div id="js_header" class="rp_header">
         <div>
             <img src="img/base/royal-panda.png">
         </div>
         <div id="js_pandaImage" class="rp_panda_logo"></div>
-        <div id="js_category_box" class="rp_category_box">
-            <a href="#" class="rp_btn flat large active js_category_trigger">家居用品</a>
-            <a href="./product2.html" class="rp_btn flat large js_category_trigger">玩具学习</a>
-            <a href="./product3.html" class="rp_btn flat large js_category_trigger">出行工具</a>
-            <a href="./product4.html" class="rp_btn flat large js_category_trigger">洗护保洁</a>
-            <a href="./product5.html" class="rp_btn flat large js_category_trigger">电器安防</a>
-            <a href="./product6.html" class="rp_btn flat large js_category_trigger">尿布服饰</a>
-            <a href="./product7.html" class="rp_btn flat large js_category_trigger">喂养餐具</a>
-            <a href="./product8.html" class="rp_btn flat large js_category_trigger">奶粉辅食</a>
+        <div class="rp_category_box">
+            <a href="./product.html" class="rp_btn flat large">家居用品</a>
+            <a href="./product2.html" class="rp_btn flat large">玩具学习</a>
+            <a href="./product3.html" class="rp_btn flat large">出行工具</a>
+            <a href="./product4.html" class="rp_btn flat large">洗护保洁</a>
+            <a href="./product5.html" class="rp_btn flat large">电器安防</a>
+            <a href="./product6.html" class="rp_btn flat large">尿布服饰</a>
+            <a href="#" class="rp_btn flat large active">喂养餐具</a>
+            <a href="./product8.html" class="rp_btn flat large">奶粉辅食</a>
         </div>
     </div>
     <div class="inner_body">
@@ -342,12 +261,11 @@
 <script>
     'use strict';
     var el_header = document.querySelector('#js_header'),
-        el_overlay = document.querySelector('#js_overlay'),
-        el_suoMenuTrigger = document.querySelector('#js_suoMenuTrigger'),
-        el_suoMenu = document.querySelector('#js_suo_menu'),
         el_productListBox = document.querySelector('#js_product_list_box'),
         el_helpButtons = document.querySelector('#js_help_button'),
         el_helpInfos = document.querySelectorAll('.js_question_info');
+
+
 
     var fn_scrollTo = function (element, scrollPixels, duration) {
         var scrollPos = element.scrollLeft;
@@ -414,28 +332,8 @@
         }, (1650));
     });
 
-    $(el_header).on('click', function (e) {
-        if (e.target.className.includes('js_category_trigger')) {
-            return;
-        }
-
-        if (e.target.id == 'js_pandaImage' && $(el_header).hasClass('active') == false) {
-            $(el_header).addClass('active')
-        } else {
-            $(el_header).removeClass('active')
-        }
-    });
-
-    $(el_suoMenuTrigger).on('click', function () {
-        $(el_suoMenu).toggleClass('active');
-        $(el_overlay).toggleClass('active');
-        // if ($(el_suoMenu).hasClass('fadeInDown')) {
-        //     $(el_suoMenu).removeClass("animated fadeInDown");
-        //     $(el_suoMenu).addClass("animated fadeUpDown hidden");
-        // } else {
-        //     $(el_suoMenu).removeClass("hidden animated fadeUpDown");
-        //     $(el_suoMenu).addClass("animated fadeInDown");
-        // }
+    $('#js_pandaImage').on('click', function () {
+        $(el_header).toggleClass('active')
     });
 </script>
 
