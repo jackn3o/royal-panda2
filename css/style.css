@@ -2,11 +2,11 @@ html,
 body {
     font-family: Microsoft YaHei, 黑体, 宋体, sans-serif !important;
     color: rgba(0, 0, 0, .87);
-    overflow: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* overflow: hidden; */
 }
 
 .inner_body {
@@ -22,7 +22,7 @@ body {
 }
 
 .rp_swing_box {
-    position: absolute;
+    position: fixed;
     height: 8rem;
     width: 8rem;
     right: 1rem;
@@ -44,6 +44,18 @@ body {
     padding: 2rem 0 0;
     transition: all 0.25s linear 0s;
     min-height: 12.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: inherit;
+}
+
+.rp_header~.inner_body {
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+    overflow-y: auto;
 }
 
 .rp_header.active {
@@ -634,6 +646,7 @@ body {
     .rp_content_box {
         max-width: 1185px;
     }
+
     .hiddenMdAndUp {
         display: none;
         flex: 0;

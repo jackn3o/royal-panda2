@@ -5,8 +5,11 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
-    <link href="css/animation.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <style>
         .video_container {
         position: relative;
@@ -26,29 +29,48 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: #efefef;">
+    <figure class="rp_swing_box suo_animation">
+        <img class="rp_suo" src="img/base/suo.png">
+    </figure>
+    <div id="js_header" class="rp_header elevation-3" data-category="2" style>
+        <div>
+            <img src="img/base/royal-panda.png">
+        </div>
+        <div id="js_pandaImage" class="rp_panda_logo"></div>
+        <div class="rp_category_box">
+            <a href="./product.html" class="rp_btn flat large">出行工具</a>
+            <a href="#" class="rp_btn flat large active">奶粉辅食</a>
+            <a href="./product.2.html" class="rp_btn flat large">喂养餐具</a>
+            <a href="./product.3.html" class="rp_btn flat large">尿布服饰</a>
+            <a href="./product.4.html" class="rp_btn flat large">家居用品</a>
+            <a href="./product.5.html" class="rp_btn flat large">玩具学习</a>
+        </div>
+    </div>
     <div class="inner_body" style="background-color: #efefef;">
-        <div style="height:40px;"></div>
-        <div class=" container-fluid">
+        <div class="container-fluid" style="max-width: 1560px;">
             <div class="row">
                 <div class="col-4">
                     <div class="row">
-                        <div class="col-6 d-flex" style="max-height: 330px;">
-                            <img src="img/main/1.png" style="height: 100%;">
+                        <div class="col-6 d-flex" style="flex:1 0;">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #F8F2E4; flex:1 0;">
+                                <img src="img/main/1.png" style="height: 80%;">
+                            </div>
                         </div>
-                        <div class="col-6 d-flex" style="padding: 1rem; max-height: 310px; margin-top: 6px; padding: 0 24px; ">
-                            <div style="background-color: #e3e3e3; display: flex; width:100%; height:100%; 
-                                justify-content: center; align-items: center; 
-                                box-shadow:8.055px 5.353px 13px rgba(123,122,122,0.55);
-                                ">
+                        <div class="col-6 d-flex" style="flex:1 0;">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #e3e3e3; flex:1 0;">
                                 <img src="img/main/2.png" style="height: 80%;">
                             </div>
                         </div>
-                        <div class="col-12 d-flex">
-                            <img src="img/main/3.png" style="width: 100%">
+                        <div class="col-12 d-flex mt-1">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #fff; flex:1 0;">
+                                <img src="img/main/3.png" style="height: 100%; width: 100%">
+                            </div>
                         </div>
-                        <div class="col-12 d-flex">
-                            <img src="img/main/4.png" style="width: 100%">
+                        <div class="col-12 d-flex mt-1">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #D4EDF4; flex:1 0;">
+                                <img src="img/main/4.png" style="height: 100%; width: 100%">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,42 +84,104 @@
                 </div>
                 <div class="col-4">
                     <div class="row">
-                        <div class="col-6 d-flex" style="max-height: 330px;">
-                            <img src="img/main/5.png" style="height: 100%;">
+                        <div class="col-6 d-flex" style="flex:1 0;">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #FFF1CA; flex:1 0;">
+                                <img src="img/main/5.png" style="height: 80%;">
+                            </div>
                         </div>
-                        <div class="col-6 d-flex" style="max-height: 330px;">
-                            <img src="img/main/6.png" style="height: 100%;">
+                        <div class="col-6 d-flex" style="flex:1 0;">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #F1C1C1; flex:1 0;">
+                                <img src="img/main/6.png" style="height: 100%;">
+                            </div>
                         </div>
-                        <div class="col-x12 d-flex">
-                            <img src="img/main/7.png" style="width: 100%">
+                        <div class="col-12 d-flex mt-1">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #fff; flex:1 0;">
+                                <img src="img/main/7.png" style="height: 100%; width: 100%">
+                            </div>
                         </div>
-                        <div class="col-12 d-flex">
-                            <img src="img/main/8.png" style="width: 100%">
+                        <div class="col-12 d-flex mt-1">
+                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 200px; background-color: #D4EDF4; flex:1 0;">
+                                <img src="img/main/8.png" style="height: 100%; width: 100%">
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="rp_footer">
-        <div class="copy_right">
-            <div class="font_caption">&copy;RoyalPanda / 泸ICP备17033585号-1</div>
-            <div class="font_caption" style="margin-top:6px;">地址: 中国上海市黄浦区广东路500号世界贸易大厦5楼</div>
+        <div class="pa-5">
+            <div class="row justify-content-center">
+                <button type="button" id="js_help_button" class="rp_btn large outline rp_btn--icon accent mr-3" style="position: absolute; left: calc(50% - 20px)">
+                    <i class="fas fa-question grey--text"></i>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_25s hidden">
+                    <span class="grey--text">第一责任制</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_5s hidden">
+                    <span class="grey--text">7天无理退货</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_75s hidden">
+                    <span class="grey--text">贴心的送货安装</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1s hidden">
+                    <span class="grey--text">尊贵超值积分</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1_25s hidden">
+                    <span class="grey--text">线下专属会员店</span>
+                </button>
+                <button type="button" id="js_close_button" class="js_question_info rp_btn large outline rp_btn--icon error delay-1_5s hidden">
+                    <i class="fas fa-times grey--text"></i>
+                </button>
+            </div>
         </div>
-        <div class="flex_spacer"></div>
-        <div class="partner" style="margin-right:10px;">
-            <img src="img/base/truste.png">
-        </div>
-        <div class="partner" style="margin-right:10px;">
-            <img src="img/base/v-logo-a.png">
-        </div>
-        <div class="partner" style="margin-right:10px;">
-            <img src="img/base/v-logo-b.png">
-        </div>
-        <div class="partner" style="margin-right:10px;">
-            <img src="img/base/v-logo-c.png">
+        <div class="rp_footer">
+            <div class="copy_right">
+                <div class="font_caption">&copy;RoyalPanda / 泸ICP备17033585号-1</div>
+                <div class="font_caption" style="margin-top:6px;">地址: 中国上海市黄浦区广东路500号世界贸易大厦5楼</div>
+            </div>
+            <div class="flex_spacer"></div>
+            <div class="partner" style="margin-right:10px;">
+                <img src="img/base/truste.png">
+            </div>
+            <div class="partner" style="margin-right:10px;">
+                <img src="img/base/v-logo-a.png">
+            </div>
+            <div class="partner" style="margin-right:10px;">
+                <img src="img/base/v-logo-b.png">
+            </div>
+            <div class="partner" style="margin-right:10px;">
+                <img src="img/base/v-logo-c.png">
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+    'use strict';
+    var el_header = document.querySelector('#js_header'),
+        el_helpButtons = document.querySelector('#js_help_button'),
+        el_helpInfos = document.querySelectorAll('.js_question_info');
+
+    $('#js_help_button').on('click', function () {
+        $(el_helpButtons).addClass("hidden");
+        $(el_helpInfos).removeClass("hidden animated zoomOut");
+        $(el_helpInfos).addClass("animated zoomIn");
+    });
+
+    $('#js_close_button').on('click', function () {
+        $(el_helpInfos).removeClass("animated zoomIn")
+        $(el_helpInfos).addClass("animated zoomOut");
+
+        setTimeout(function () {
+            $(el_helpInfos).addClass("hidden");
+            $(el_helpButtons).removeClass("hidden");
+            $(el_helpButtons).addClass("animated zoomIn");
+        }, (1650));
+    });
+
+    $('#js_pandaImage').on('click', function () {
+        $(el_header).toggleClass('active')
+    });
+</script>
 
 </html>
