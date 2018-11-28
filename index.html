@@ -31,7 +31,47 @@
         justify-content: center;
         align-items:center;
         position: relative;
+        overflow: hidden;
+        cursor: pointer;  
     }
+
+    .rp_category_card h2{
+        color:rgb(51, 51, 51);
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        width:100%;
+        z-index:1;
+    }
+
+    .rp_category_card:hover h2{
+        color:#fff;
+    }
+
+    .rp_category_card h2:after{
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        height: 2px;
+        width: 0%;
+        z-index: 1;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        transform: translate3d(-100%,0,0);
+        -webkit-transform: translate3d(-100%,0,0);
+    }
+
+    .rp_category_card:hover h2:after{
+        opacity:  1;
+        width: 90%;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+    }
+
+ 
+
     .rp_category_card:hover .rp_category_card--hover{ 
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
@@ -44,7 +84,7 @@
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
         opacity: 0;
-        background:rgba(0,0,0,0.5);
+        background:rgba(0,0,0,0.6);
         position: absolute;
         top:0;
         left:0;
@@ -53,17 +93,21 @@
         overflow: hidden;
         padding:1rem;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        align-content: baseline;
+        padding-top:3.1rem;
     }
+
     .rp_category_card:hover .rp_category_card--hover .rp_btn{
         transform: translateX(0);
         -webkit-transform: translateX(0);
-        margin-bottom:.5rem;
+        margin-bottom: .5rem;
+        margin-right: .5rem;
     }
+
     .rp_category_card .rp_category_card--hover .rp_btn{
-        transform: translateX(-150%);
-        -webkit-transform: translateX(-150%);
+        transform: translateX(700%);
+        -webkit-transform: translateX(700%);
     }
 
     .rp_category_card:hover .rp_category_card--hover .rp_btn:nth-of-type(2){
@@ -79,7 +123,10 @@
     }
 
     .rp_category_card:hover .rp_category_card--hover .rp_btn:nth-of-type(5){
-        transition-delay: .1s;
+        transition-delay: 1s;
+    }
+    .rp_category_card:hover .rp_category_card--hover .rp_btn:nth-of-type(6){
+        transition-delay: 1.25s;
     }
 
 
@@ -111,28 +158,50 @@
                     <div class="row">
                         <div class="col-6 d-flex" style="flex:1 0;">
                             <div class="rp_category_card" style="max-height: 24vh; background-color: #F8F2E4; flex:1 0;">
-                                <div class="rp_category_card--hover">
-                                    <button type="button" class="rp_btn outline accent round small white--text">ABC</button>
-                                    <button type="button" class="rp_btn outline accent round small white--text">ABC</button>
-                                    <button type="button" class="rp_btn outline accent round small white--text">ABC</button>
-                                    <button type="button" class="rp_btn outline accent round small white--text">ABC</button>
-                                </div>
+                                <h2>家居用品</h2>
                                 <img src="img/main/1.png" style="height: 24vh;">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">婴儿床</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">宝贝桌椅</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">收纳整理</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">配件</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">其他家具及装饰</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-6 d-flex" style="flex:1 0;">
                             <div class="rp_category_card" style="max-height: 24vh; background-color: #e3e3e3; flex:1 0;">
+                                <h2>出行工具</h2>
                                 <img src="img/main/2.png" style="height: 22vh;">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">儿童推车</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">安全座椅</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">脚踏车</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">相关配件</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 d-flex mt-1">
-                            <div class="rd-rp_category_card" style="max-height: 24vh; background-color: #fff; flex:1 0;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #fff; flex:1 0;">
+                                <h2>洗护保洁</h2>
                                 <img src="img/main/3.png" style="height: 24vh; width: 100%">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">洗漱护肤</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">纸巾</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">浴盆</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 d-flex mt-1">
                             <div class="rp_category_card" style="max-height: 24vh; background-color: #D4EDF4; flex:1 0;">
+                                <h2>玩具学习</h2>
                                 <img src="img/main/4.png" style="height: 24vh; width: 100%">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">0-3岁图书</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">3-6岁图书</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">学习玩具</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">户外玩具</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,23 +217,50 @@
                 <div class="col-4">
                     <div class="row">
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #FFF1CA; flex:1 0;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #FFF1CA; flex:1 0;">
+                                <h2>尿布服饰</h2>
                                 <img src="img/main/5.png" style="height: 24vh;">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">尿布</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">童鞋服饰</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">妈咪包</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #F1C1C1; flex:1 0;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #F1C1C1; flex:1 0;">
+                                <h2>喂养餐具</h2>
                                 <img src="img/main/6.png" style="height: 24vh;">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">奶瓶及配件</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">碗筷餐具</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">宝宝餐椅</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">宝贝水壶</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 d-flex mt-1">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #fff; flex:1 0;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #fff; flex:1 0;">
+                                <h2>奶粉辅食</h2>
                                 <img src="img/main/7.png" style="height: 24vh; width: 100%">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">配方奶粉</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">液态奶</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">辅食及零嘴</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 d-flex mt-1">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #D4EDF4; flex:1 0;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #D4EDF4; flex:1 0;">
+                                <h2>电器安防</h2>
                                 <img src="img/main/8.png" style="height: 24vh; width: 100%">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">体温监测</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">日常使用</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">亲子记录</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">运动防护</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">相关配件</button>
+                                </div>
                             </div>
                         </div>
 
