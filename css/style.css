@@ -529,6 +529,7 @@ body[data-category='8'] .rp_header.active {
     border-radius: 50%;
     min-width: 36px;
     width: 36px;
+    padding: 0;
 }
 
 .rp_btn.round {

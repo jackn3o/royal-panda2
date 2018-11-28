@@ -86,6 +86,15 @@
         .suo_menu_icon.order{
             background-image: url('./img/base/order.png');
         }
+
+        .rp_btn.rp_btn--icon .close_question_icon{
+            height: 1rem;
+            width: 1rem;
+            background-image: url(./img/base/undo.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
     </style>
 </head>
 
@@ -313,7 +322,7 @@
                         <span class="grey--text">线下专属会员店</span>
                     </button>
                     <button type="button" id="js_close_button" class="js_question_info rp_btn large outline rp_btn--icon error delay-1_5s hidden">
-                        <i class="fas fa-times grey--text"></i>
+                        <div class="close_question_icon"></div>
                     </button>
                 </div>
             </div>
