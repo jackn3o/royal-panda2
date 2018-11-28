@@ -528,23 +528,17 @@ body[data-category='6'] .rp_header.active {
 }
 
 .rp_btn.accent {
-    color: #faba15 !important;
-    caret-color: #faba15 !important;
-    border-color: #faba15 !important;
+    color: #faba15;
+    caret-color: #faba15;
+    border-color: #faba15;
 }
 
 .rp_btn.error {
-    color: #F44336 !important;
-    caret-color: #F44336 !important;
-    border-color: #F44336 !important;
+    color: #F44336;
+    caret-color: #F44336;
+    border-color: #F44336;
 }
 
-.transparent {
-    background-color: transparent !important;
-    color: transparent !important;
-    caret-color: transparent !important;
-    border-color: transparent !important;
-}
 
 /* kdksdk */
 

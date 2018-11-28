@@ -26,6 +26,43 @@
         height: 100%;
         background: #ccc; /* Random BG colour for unloaded video elements */
     }
+    .rp_category_card{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        position: relative;
+    }
+    .rp_category_card:hover .rp_category_card--hover{ 
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+        opacity: 1;
+    }
+
+    .rp_category_card .rp_category_card--hover{
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+        opacity: 0;
+        background:rgba(0,0,0,0.5);
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom: 0;
+        overflow: hidden;
+        padding:1rem;
+    }
+    .rp_category_card:hover .rp_category_card--hover .rp_btn{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    .rp_category_card .rp_category_card--hover .rp_btn{
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+
+
     </style>
 </head>
 
@@ -53,22 +90,25 @@
                 <div class="col-4">
                     <div class="row">
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #F8F2E4; flex:1 0;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #F8F2E4; flex:1 0;">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">ABC</button>
+                                </div>
                                 <img src="img/main/1.png" style="height: 24vh;">
                             </div>
                         </div>
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #e3e3e3; flex:1 0;">
-                                <img src="img/main/2.png" style="height: 24vh;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #e3e3e3; flex:1 0;">
+                                <img src="img/main/2.png" style="height: 22vh;">
                             </div>
                         </div>
                         <div class="col-12 d-flex mt-1">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #fff; flex:1 0;">
+                            <div class="rd-rp_category_card" style="max-height: 24vh; background-color: #fff; flex:1 0;">
                                 <img src="img/main/3.png" style="height: 24vh; width: 100%">
                             </div>
                         </div>
                         <div class="col-12 d-flex mt-1">
-                            <div class="d-flex elevation-1 justify-content-center align-items-center" style="max-height: 24vh; background-color: #D4EDF4; flex:1 0;">
+                            <div class="rp_category_card" style="max-height: 24vh; background-color: #D4EDF4; flex:1 0;">
                                 <img src="img/main/4.png" style="height: 24vh; width: 100%">
                             </div>
                         </div>

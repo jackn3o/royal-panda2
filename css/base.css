@@ -91,6 +91,11 @@
     font-size: 0.8rem;
 }
 
+.white--text {
+    color: #fff !important;
+    caret-color: #fff !important;
+}
+
 .grey--text {
     color: #757575 !important;
     caret-color: #757575 !important;
@@ -103,6 +108,15 @@
 .accent--text {
     color: #faba15 !important;
     caret-color: #faba15 !important;
+}
+
+
+
+.transparent {
+    background-color: transparent !important;
+    color: transparent !important;
+    caret-color: transparent !important;
+    border-color: transparent !important;
 }
 
 .d-flex {
