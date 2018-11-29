@@ -332,6 +332,7 @@ body[data-category='8'] .rp_header.active {
     text-decoration: none;
     transition: .3s cubic-bezier(.25, .8, .5, 1);
     padding: 1rem;
+    cursor: pointer;
 }
 
 .rp_product_card--media img {
