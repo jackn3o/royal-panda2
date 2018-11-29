@@ -454,6 +454,55 @@ body[data-category='8'] .rp_header.active {
     transition-delay: 200ms;
 }
 
+.rp_product_box .hover_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rp_product_box .hover_menu .rp_btn {
+    opacity: 0;
+    width: 180px;
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    transition-delay: 0;
+}
+
+.rp_product_box:hover .hover_menu .rp_btn {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    opacity: 1;
+}
+
+.rp_product_box .rp_btn.add_card_button {
+    top: 6.75rem;
+    background-color: #ffdf62;
+    color: rgba(87, 90, 93, 255);
+    transition-delay: 0;
+}
+
+.rp_product_box .rp_btn.buy_now_button {
+    top: 7.5rem;
+    background-color: #fff;
+    border: 1px solid #ffdf62;
+    color: rgba(87, 90, 93, 255);
+    transition-delay: 0;
+}
+
+.rp_product_box:hover .rp_btn.add_card_button {
+    transition-delay: .25s;
+}
+
+.rp_product_box:hover .rp_btn.buy_now_button {
+    transition-delay: .45s;
+}
+
 .rp_product_card--media {
     max-height: 240px;
     display: flex;
