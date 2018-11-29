@@ -18,9 +18,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height:65vh;
+            height:75vh;
             margin-top:2rem;
-            }
+        }
+
         .rp_suo_menu.active  .suo_menu_icon{
             opacity: 1;
             transform: scale(1);
@@ -30,6 +31,7 @@
             -ms-transform: scale(1);
             -moz-transition: all 250ms ease-in;
             -moz-transform: scale(1);
+            z-index:3;
         }
 
         .rp_suo_menu .suo_menu_icon{
@@ -49,9 +51,10 @@
             transition: all 200ms ease-in;
             transform: scale(0);
         }
+
         .overlay {
             position: fixed;
-            background-color: rgba(255,255,255, .5);
+            background-color: rgba(255,255,255, .9);
             top:0;
             left:0;
             bottom:0;
@@ -59,10 +62,31 @@
             z-index:0;
             opacity:0;
             transition: .3s cubic-bezier(.25, .8, .5, 1);
+          
         }
         .overlay.active {
             z-index:6;
             opacity:1;
+        }
+        .overlay.active:after{
+            content:'';
+            filter: blur(20px);
+            content: '';
+            margin: -35px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            filter: blur(20px);
+            z-index: -1;
+        }
+
+        .suo_menu_icon.search{
+            background-image: url('./img/base/search.png');
+        }
+        .suo_menu_icon.search:hover{
+            background-image: url('./img/base/search_hover.png');
         }
         .suo_menu_icon.huiyuan{
             background-image: url('./img/base/huiyuan.png');
@@ -83,9 +107,10 @@
         .suo_menu_icon.kefu:hover{
             background-image: url('./img/base/kefu_hover.png');
         }
-        .suo_menu_icon.order{
-            background-image: url('./img/base/order.png');
+        .suo_menu_icon.feedback{
+            background-image: url('./img/base/feedback_gold.png');
         }
+     
 
         .rp_btn.rp_btn--icon .close_question_icon{
             height: 1rem;
@@ -106,10 +131,11 @@
         </figure>
         <figure id="js_suo_menu" class="rp_suo_menu">
             <div class="suo_menu_icon huiyuan"></div>
+            <div class="suo_menu_icon search"></div>
             <div class="suo_menu_icon cart"></div>
             <div class="suo_menu_icon kefu"></div>
             <div style="flex:1;"></div>
-            <div class="suo_menu_icon order"></div>
+            <div class="suo_menu_icon feedback"></div>
         </figure>
     </div>
 
@@ -206,10 +232,10 @@
 
             <!--  products -->
             <div class="overflow_x_container">
-                <button type="button" id="js_btn_left" class="rp_btn outline rp_btn--icon accent btn_left" style="position: absolute; left:0; top: calc(50% - 54px);">
+                <button type="button" id="js_btn_left" class="rp_btn outline rp_btn--icon accent btn_left" style="position: absolute; left:0; top: calc(50% - 54px); z-index:7;">
                     <i class="fas fa-angle-left grey--text"></i>
                 </button>
-                <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent btn_right" style="position: absolute; right:0; top: calc(50% - 54px);">
+                <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent btn_right" style="position: absolute; right:0; top: calc(50% - 54px); z-index:7;">
                     <i class="fas fa-angle-right grey--text"></i>
                 </button>
                 <div id="js_product_list_box" class="slider">
@@ -321,12 +347,15 @@
                     <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1_25s hidden">
                         <span class="grey--text">线下专属会员店</span>
                     </button>
-                    <button type="button" id="js_close_button" class="js_question_info rp_btn large outline rp_btn--icon error delay-1_5s hidden">
+                    <button type="button" id="js_close_button" class="js_question_info rp_btn large outline rp_btn--icon accent delay-1_5s hidden">
                         <div class="close_question_icon"></div>
                     </button>
                 </div>
             </div>
             <div class="rp_footer">
+                <div class="partner mx-2">
+                    <img src="img/base/logo-footer.png">
+                </div>
                 <div class="copy_right">
                     <div class="font_caption">&copy;RoyalPanda / 泸ICP备17033585号-1</div>
                     <div class="font_caption" style="margin-top:6px;">地址: 中国上海市黄浦区广东路500号世界贸易大厦5楼</div>
