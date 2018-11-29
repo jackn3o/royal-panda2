@@ -598,39 +598,39 @@ body[data-category='8'] .rp_header.active {
 
 .suo_menu_icon.search {
     transform: scale(0.9);
-    background-image: url('./img/base/search.png');
+    background-image: url('../img/base/search.png');
 }
 
 .suo_menu_icon.search:hover {
-    background-image: url('./img/base/search_hover.png');
+    background-image: url('../img/base/search_hover.png');
 }
 
 .suo_menu_icon.huiyuan {
-    background-image: url('./img/base/huiyuan.png');
+    background-image: url('../img/base/huiyuan.png');
 }
 
 .suo_menu_icon.huiyuan:hover {
-    background-image: url('./img/base/huiyuan_hover.png');
+    background-image: url('../img/base/huiyuan_hover.png');
 }
 
 .suo_menu_icon.cart {
-    background-image: url('./img/base/cart.png');
+    background-image: url('../img/base/cart.png');
 }
 
 .suo_menu_icon.cart:hover {
-    background-image: url('./img/base/cart_hover.png');
+    background-image: url('../img/base/cart_hover.png');
 }
 
 .suo_menu_icon.kefu {
-    background-image: url('./img/base/kefu.png');
+    background-image: url('../img/base/kefu.png');
 }
 
 .suo_menu_icon.kefu:hover {
-    background-image: url('./img/base/kefu_hover.png');
+    background-image: url('../img/base/kefu_hover.png');
 }
 
 .suo_menu_icon.feedback {
-    background-image: url('./img/base/feedback_gold.png');
+    background-image: url('../img/base/feedback_gold.png');
 }
 
 .rp_btn.help_button {
@@ -648,7 +648,7 @@ body[data-category='8'] .rp_header.active {
 .rp_btn.help_button.active i {
     height: 1rem;
     width: 1rem;
-    background-image: url(./img/base/undo.png);
+    background-image: url(../img/base/undo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
