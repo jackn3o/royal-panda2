@@ -13,113 +13,7 @@
         crossorigin="anonymous">
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <style>
-        .rp_suo_menu{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height:75vh;
-            margin-top:2rem;
-        }
 
-        .rp_suo_menu.active  .suo_menu_icon{
-            opacity: 1;
-            transform: scale(1);
-            transition: all 250ms ease-in;
-            -webkit-transform: scale(1);
-            -webkit-transition: all 250ms ease-in;
-            -ms-transform: scale(1);
-            -moz-transition: all 250ms ease-in;
-            -moz-transform: scale(1);
-            z-index:3;
-        }
-
-        .rp_suo_menu .suo_menu_icon{
-            width: 4rem;
-            height: 4rem;
-            margin-top: 1.5rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity:0;
-            -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(0);
-            -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(0);
-            -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(0);
-            transition: all 200ms ease-in;
-            transform: scale(0);
-        }
-
-        .overlay {
-            position: fixed;
-            background-color: rgba(255,255,255, .9);
-            top:0;
-            left:0;
-            bottom:0;
-            right: 0;
-            z-index:0;
-            opacity:0;
-            transition: .3s cubic-bezier(.25, .8, .5, 1);
-          
-        }
-        .overlay.active {
-            z-index:6;
-            opacity:1;
-        }
-        .overlay.active:after{
-            content:'';
-            filter: blur(20px);
-            content: '';
-            margin: -35px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            filter: blur(20px);
-            z-index: -1;
-        }
-
-        .suo_menu_icon.search{
-            background-image: url('./img/base/search.png');
-        }
-        .suo_menu_icon.search:hover{
-            background-image: url('./img/base/search_hover.png');
-        }
-        .suo_menu_icon.huiyuan{
-            background-image: url('./img/base/huiyuan.png');
-        }
-        .suo_menu_icon.huiyuan:hover{
-            background-image: url('./img/base/huiyuan_hover.png');
-        }
-
-        .suo_menu_icon.cart{
-            background-image: url('./img/base/cart.png');
-        }
-        .suo_menu_icon.cart:hover{
-            background-image: url('./img/base/cart_hover.png');
-        }
-        .suo_menu_icon.kefu{
-            background-image: url('./img/base/kefu.png');
-        }
-        .suo_menu_icon.kefu:hover{
-            background-image: url('./img/base/kefu_hover.png');
-        }
-        .suo_menu_icon.feedback{
-            background-image: url('./img/base/feedback_gold.png');
-        }
-     
-
-        .rp_btn.rp_btn--icon .close_question_icon{
-            height: 1rem;
-            width: 1rem;
-            background-image: url(./img/base/undo.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center center;
-        }
     </style>
 </head>
 
@@ -130,10 +24,10 @@
             <img id="js_suoMenuTrigger" class="rp_suo" src="img/base/suo.png">
         </figure>
         <figure id="js_suo_menu" class="rp_suo_menu">
-            <div class="suo_menu_icon huiyuan"></div>
+            <div class="suo_menu_icon huiyuan mr-2"></div>
             <div class="suo_menu_icon search"></div>
             <div class="suo_menu_icon cart"></div>
-            <div class="suo_menu_icon kefu"></div>
+            <div class="suo_menu_icon kefu ml-2"></div>
             <div style="flex:1;"></div>
             <div class="suo_menu_icon feedback"></div>
         </figure>
@@ -160,7 +54,7 @@
             <div class="rp_toolbox mt-3 ">
                 <div class="row px-3">
                     <div class="col-sm-4 col-lg filter_box">
-                        <div class="rp-dropdown" tabindex="1">品牌牌子
+                        <div class="rp_dropdown" tabindex="1">品牌牌子
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
                                 <li><a href="#">xxx</a></li>
@@ -169,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg filter_box">
-                        <div class="rp-dropdown" tabindex="2">全部分类
+                        <div class="rp_dropdown" tabindex="2">全部分类
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
                                 <li><a href="#">xxx</a></li>
@@ -178,7 +72,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg filter_box">
-                        <div class="rp-dropdown" tabindex="3">宝贝年龄
+                        <div class="rp_dropdown" tabindex="3">宝贝年龄
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
                                 <li><a href="#">xxx</a></li>
@@ -187,7 +81,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg filter_box">
-                        <div class="rp-dropdown" tabindex="4">产品材料
+                        <div class="rp_dropdown" tabindex="4">产品材料
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
                                 <li><a href="#">xxx</a></li>
@@ -196,7 +90,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg filter_box">
-                        <div class="rp-dropdown" tabindex="5">新品发布
+                        <div class="rp_dropdown" tabindex="5">新品发布
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
                                 <li><a href="#">xxx</a></li>
@@ -205,7 +99,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg filter_box">
-                        <div class="rp-dropdown" tabindex="1">热卖产品
+                        <div class="rp_dropdown" tabindex="1">热卖产品
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
                                 <li><a href="#">xxx</a></li>
@@ -214,7 +108,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-lg filter_box">
-                        <div class="rp-dropdown" tabindex="1">排序
+                        <div class="rp_dropdown" tabindex="1">排序
                             <ul class="dropdown">
                                 <li><a href="#">xxx</a></li>
                                 <li><a href="#">xxx</a></li>
@@ -232,10 +126,10 @@
 
             <!--  products -->
             <div class="overflow_x_container">
-                <button type="button" id="js_btn_left" class="rp_btn outline rp_btn--icon accent btn_left" style="position: absolute; left:0; top: calc(50% - 54px); z-index:7;">
+                <button type="button" id="js_btn_left" class="rp_btn outline rp_btn--icon accent btn_left" style="position: absolute; left:0; top: calc(50% - 54px);">
                     <i class="fas fa-angle-left grey--text"></i>
                 </button>
-                <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent btn_right" style="position: absolute; right:0; top: calc(50% - 54px); z-index:7;">
+                <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent btn_right" style="position: absolute; right:0; top: calc(50% - 54px);">
                     <i class="fas fa-angle-right grey--text"></i>
                 </button>
                 <div id="js_product_list_box" class="slider">
@@ -328,10 +222,11 @@
             </div>
             <div class="pa-5">
                 <div class="row justify-content-center">
-                    <button type="button" id="js_help_button" class="rp_btn large outline rp_btn--icon accent mr-3"
-                        style="position: absolute; left: calc(50% - 20px)">
-                        <i class="fas fa-question grey--text"></i>
+                    <button type="button" id="js_help_button" class="rp_btn large rp_btn--icon outline accent help_button">
+                        <i class="fas grey--text"></i>
                     </button>
+                </div>
+                <div class="row justify-content-center">
                     <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_25s hidden">
                         <span class="grey--text">第一责任制</span>
                     </button>
@@ -347,9 +242,7 @@
                     <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1_25s hidden">
                         <span class="grey--text">线下专属会员店</span>
                     </button>
-                    <button type="button" id="js_close_button" class="js_question_info rp_btn large outline rp_btn--icon accent delay-1_5s hidden">
-                        <div class="close_question_icon"></div>
-                    </button>
+
                 </div>
             </div>
             <div class="rp_footer">
@@ -385,7 +278,7 @@
         el_suoMenuTrigger = document.querySelector('#js_suoMenuTrigger'),
         el_suoMenu = document.querySelector('#js_suo_menu'),
         el_productListBox = document.querySelector('#js_product_list_box'),
-        el_helpButtons = document.querySelector('#js_help_button'),
+        el_helpButton = document.querySelector('#js_help_button'),
         el_helpInfos = document.querySelectorAll('.js_question_info');
 
     var fn_scrollTo = function (element, scrollPixels, duration) {
@@ -436,21 +329,28 @@
         fn_swipeRight();
     });
 
-    $('#js_help_button').on('click', function () {
-        $(el_helpButtons).addClass("hidden");
-        $(el_helpInfos).removeClass("hidden animated zoomOut");
-        $(el_helpInfos).addClass("animated zoomIn");
+    $(el_helpButton).on('click', function () {
+        $(el_helpButton).toggleClass('active');
+        $(document).trigger('helpTrigger');
+    });
+
+    $(document).on('helpTrigger', function () {
+        if ($(el_helpButton).hasClass('active')) {
+            $(el_helpInfos).removeClass("hidden animated zoomOut");
+            $(el_helpInfos).addClass("animated zoomIn");
+        } else {
+            $(el_helpInfos).removeClass("animated zoomIn")
+            $(el_helpInfos).addClass("animated zoomOut");
+
+            setTimeout(function () {
+                $(el_helpInfos).addClass("hidden");
+            }, (1650));
+        }
+
     });
 
     $('#js_close_button').on('click', function () {
-        $(el_helpInfos).removeClass("animated zoomIn")
-        $(el_helpInfos).addClass("animated zoomOut");
 
-        setTimeout(function () {
-            $(el_helpInfos).addClass("hidden");
-            $(el_helpButtons).removeClass("hidden");
-            $(el_helpButtons).addClass("animated zoomIn");
-        }, (1650));
     });
 
     $(el_header).on('click', function (e) {
