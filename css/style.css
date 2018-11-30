@@ -43,7 +43,7 @@ body {
     width: 100%;
     padding: 2rem 0 0;
     transition: all 0.25s linear 0s;
-    min-height: 12.5rem;
+    min-height: 9rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@ body {
 }
 
 .rp_header~.inner_body {
-    padding-top: 14rem;
+    padding-top: 11rem;
     padding-bottom: 5rem;
     overflow-y: auto;
 }
@@ -66,11 +66,11 @@ body {
 
 body[data-category='1'] .inner_body,
 body[data-category='1'] .rp_header {
-    background-color: #f8f2e4;
+    background-color: #fff;
 }
 
 body[data-category='1'] .rp_header.active {
-    background-color: #f8eed8;
+    background-color: #fff;
 }
 
 /* 玩具学习 */
@@ -177,7 +177,7 @@ body[data-category='8'] .rp_header.active {
     background-image: url("../img/base/panda.png");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 44px 20px;
+    background-size: 38px 20px;
     padding-right: 4px;
 }
 
@@ -187,7 +187,7 @@ body[data-category='8'] .rp_header.active {
     background-image: url("../img/base/panda.gif");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 50px 45px;
+    background-size: 44px 45px;
 }
 
 .rp_content_title {
@@ -221,7 +221,7 @@ body[data-category='8'] .rp_header.active {
     top: 0;
     height: 100%;
     width: 1px;
-    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .08);
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, .4);
     z-index: 1;
 }
 
@@ -232,7 +232,7 @@ body[data-category='8'] .rp_header.active {
     right: 0;
     height: 100%;
     width: 1px;
-    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .08);
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, .4);
     z-index: 2;
 }
 
@@ -749,6 +749,7 @@ body[data-category='8'] .rp_header.active {
     min-width: 30px;
 }
 
+.accent,
 .rp_btn.accent {
     background-color: #faba15;
     color: #faba15;
@@ -769,10 +770,10 @@ body[data-category='8'] .rp_header.active {
     position: relative;
     min-width: 4rem;
     padding: 0.8rem 1rem;
-    color: #757575;
+    color: #fff;
     flex: 1;
     /* Styles */
-    background: transparent;
+    background: #faba15;
     cursor: pointer;
     outline: none;
     -webkit-transition: all 0.3s ease-out;
@@ -793,7 +794,7 @@ body[data-category='8'] .rp_header.active {
     margin-top: -3px;
     border-width: 6px 6px 0 6px;
     border-style: solid;
-    border-color: #faba15 transparent;
+    border-color: #fff transparent;
 }
 
 .rp_dropdown .dropdown {
@@ -846,17 +847,17 @@ body[data-category='8'] .rp_header.active {
 /* Hover state */
 
 .rp_dropdown .dropdown li:hover a {
-    color: #faba15;
+    color: #fff;
 }
 
 /* Active state */
 
 .rp_dropdown:focus,
 .rp_dropdown:active {
-    background: #faba15;
+    background: #fff;
     box-shadow: none;
     border-bottom: none;
-    color: white;
+    color: #757575;
 }
 
 .rp_dropdown:focus:after,
