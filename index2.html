@@ -4,9 +4,9 @@
 <head>
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/base.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
@@ -27,12 +27,11 @@
             <div class="suo_menu_icon feedback"></div>
         </figure>
     </div>
-
     <div id="js_header" class="rp_header">
-        <div>
+        <div class="rp_logo">
             <img src="img/base/royal-panda.png">
         </div>
-        <div id="js_pandaImage" class="rp_panda_logo"></div>
+        <!-- <div id="js_pandaImage" class="rp_panda_logo"></div> -->
         <div id="js_category_box" class="rp_category_box">
             <a href="#" class="rp_btn flat large active js_category_trigger">家居用品</a>
             <a href="./product2.html" class="rp_btn flat large js_category_trigger">玩具学习</a>
@@ -44,15 +43,15 @@
             <a href="./product8.html" class="rp_btn flat large js_category_trigger">奶粉辅食</a>
         </div>
     </div>
-    <div class="inner_body" style="background-color: #efefef;">
-        <div class="container-fluid" style="max-width: 2100px;">
-            <div class="row">
+    <div class="inner_body2" style="background-color: #efefef;">
+        <div class="container-fluid no-gutters">
+            <div class="row mx-0">
                 <div class="col-4">
-                    <div class="row">
+                    <div class="row mx-0">
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="rp_category_card" style="max-height: 24vh; background-color: #F8F2E4; flex:1 0;">
+                            <div class="rp_category_card" style="background-color: #F8F2E4; ">
                                 <h2>家居用品</h2>
-                                <img src="img/main/1.png" style="height: 24vh;">
+                                <img src="img/main/1.png" style="height: 100%;">
                                 <div class="rp_category_card--hover">
                                     <button type="button" class="rp_btn outline accent round small white--text">婴儿床</button>
                                     <button type="button" class="rp_btn outline accent round small white--text">宝贝桌椅</button>
@@ -63,9 +62,9 @@
                             </div>
                         </div>
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="rp_category_card" style="max-height: 24vh; background-color: #e3e3e3; flex:1 0;">
+                            <div class="rp_category_card" style="background-color: #e3e3e3;">
                                 <h2>出行工具</h2>
-                                <img src="img/main/2.png" style="height: 22vh;">
+                                <img src="img/main/2.png" style="height: 70%;">
                                 <div class="rp_category_card--hover">
                                     <button type="button" class="rp_btn outline accent round small white--text">儿童推车</button>
                                     <button type="button" class="rp_btn outline accent round small white--text">安全座椅</button>
@@ -74,10 +73,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 d-flex mt-1">
-                            <div class="rp_category_card" style="max-height: 24vh; background-color: #fff; flex:1 0;">
+                        <div class="col-12 d-flex">
+                            <div class="rp_category_card wide" style="background-color: #fff;">
                                 <h2>洗护保洁</h2>
-                                <img src="img/main/3.png" style="height: 24vh; width: 100%">
+                                <img src="img/main/3.png" style="height: 100%; width: 100%">
                                 <div class="rp_category_card--hover">
                                     <button type="button" class="rp_btn outline accent round small white--text">洗漱护肤</button>
                                     <button type="button" class="rp_btn outline accent round small white--text">纸巾</button>
@@ -85,10 +84,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 d-flex mt-1">
-                            <div class="rp_category_card" style="max-height: 24vh; background-color: #D4EDF4; flex:1 0;">
+                        <div class="col-12 d-flex" style="flex:1 0;">
+                            <div class="rp_category_card wide" style="background-color: #D4EDF4;">
                                 <h2>玩具学习</h2>
-                                <img src="img/main/4.png" style="height: 24vh; width: 100%">
+                                <img src="img/main/4.png" style=" width: 100%">
                                 <div class="rp_category_card--hover">
                                     <button type="button" class="rp_btn outline accent round small white--text">0-3岁图书</button>
                                     <button type="button" class="rp_btn outline accent round small white--text">3-6岁图书</button>
@@ -99,29 +98,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="video_container" style="height: calc(48vh + .5rem);">
-                        <video autoplay loop>
-                            <source src="img/panda.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="rp_category_card" style="max-height: 24vh; background-color: #fff; flex:1 0; margin-top: .5rem;">
-                        <h2>奶粉辅食</h2>
-                        <img src="img/main/7.png" style="height: 24vh; width: 100%">
-                        <div class="rp_category_card--hover">
-                            <button type="button" class="rp_btn outline accent round small white--text">配方奶粉</button>
-                            <button type="button" class="rp_btn outline accent round small white--text">液态奶</button>
-                            <button type="button" class="rp_btn outline accent round small white--text">辅食及零嘴</button>
+                <div class="col-4 px-0">
+                    <div class="row mx-0">
+                        <div class="col-12">
+                            <div class="video_container" style="height: calc(50vh + 4px);">
+                                <video autoplay loop>
+                                    <source src="img/panda.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex" style="flex:1 0;">
+                            <div class="rp_category_card wide" style="background-color: #fff;">
+                                <h2>奶粉辅食</h2>
+                                <img src="img/main/7.png">
+                                <div class="rp_category_card--hover">
+                                    <button type="button" class="rp_btn outline accent round small white--text">配方奶粉</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">液态奶</button>
+                                    <button type="button" class="rp_btn outline accent round small white--text">辅食及零嘴</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="row">
+                    <div class="row mx-0">
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="rp_category_card" style="max-height: 48vh; background-color: #FFF1CA; flex:1 0;">
+                            <div class="rp_category_card tall" style="background-color: #FFF1CA;">
                                 <h2>尿布服饰</h2>
-                                <img src="img/main/5.png" style="height: 48vh;">
+                                <img src="img/main/5.png" style="height: 80%">
                                 <div class="rp_category_card--hover">
                                     <button type="button" class="rp_btn outline accent round small white--text">尿布</button>
                                     <button type="button" class="rp_btn outline accent round small white--text">童鞋服饰</button>
@@ -130,9 +135,9 @@
                             </div>
                         </div>
                         <div class="col-6 d-flex" style="flex:1 0;">
-                            <div class="rp_category_card" style="max-height: 48vh; background-color: #F1C1C1; flex:1 0;">
+                            <div class="rp_category_card tall" style="background-color: #F1C1C1;">
                                 <h2>喂养餐具</h2>
-                                <img src="img/main/6.png" style="height: 48vh;">
+                                <img src="img/main/6.png" style="height: 80%">
                                 <div class="rp_category_card--hover">
                                     <button type="button" class="rp_btn outline accent round small white--text">奶瓶及配件</button>
                                     <button type="button" class="rp_btn outline accent round small white--text">碗筷餐具</button>
@@ -141,11 +146,10 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12 d-flex mt-1">
-                            <div class="rp_category_card" style="max-height: 24vh; background-color: #D4EDF4; flex:1 0;">
+                        <div class="col-12 d-flex">
+                            <div class="rp_category_card tall wide" style="background-color: #D4EDF4;">
                                 <h2>电器安防</h2>
-                                <img src="img/main/8.png" style="height: 24vh; width: 100%">
+                                <img src="img/main/8.png" style="height: 100%">
                                 <div class="rp_category_card--hover">
                                     <button type="button" class="rp_btn outline accent round small white--text">体温监测</button>
                                     <button type="button" class="rp_btn outline accent round small white--text">日常使用</button>
@@ -160,29 +164,28 @@
                 </div>
             </div>
         </div>
-        <div class="pa-5">
-            <div class="row justify-content-center">
-                <button type="button" id="js_help_button" class="rp_btn large rp_btn--icon outline accent help_button">
-                    <i class="fas grey--text"></i>
+        <div class="help_box">
+            <div class="row justify-content-center question_info_box">
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                    <span class="grey--text">第一责任制</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                    <span class="grey--text">7天无理退货</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                    <span class="grey--text">贴心的送货安装</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                    <span class="grey--text">尊贵超值积分</span>
+                </button>
+                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                    <span class="grey--text">线下专属会员店</span>
                 </button>
             </div>
             <div class="row justify-content-center">
-                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_25s hidden">
-                    <span class="grey--text">第一责任制</span>
+                <button type="button" id="js_help_button" class="rp_btn x_large rp_btn--icon accent help_button">
+                    <i class="fas grey--text"></i>
                 </button>
-                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_5s hidden">
-                    <span class="grey--text">7天无理退货</span>
-                </button>
-                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_75s hidden">
-                    <span class="grey--text">贴心的送货安装</span>
-                </button>
-                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1s hidden">
-                    <span class="grey--text">尊贵超值积分</span>
-                </button>
-                <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1_25s hidden">
-                    <span class="grey--text">线下专属会员店</span>
-                </button>
-
             </div>
         </div>
         <div class="rp_footer">
