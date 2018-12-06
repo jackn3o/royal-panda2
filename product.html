@@ -9,6 +9,7 @@
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/rating.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
@@ -29,25 +30,55 @@
             <div class="suo_menu_icon feedback"></div>
         </figure>
     </div>
-    <div id="js_header" class="rp_header">
+    <div id="js_header" class="rp_header active">
         <div class="rp_logo">
             <img src="img/base/royal-panda.png">
         </div>
         <div id="js_pandaImage" class="rp_panda_logo"></div>
         <div id="js_category_box" class="rp_category_box">
-            <a href="#" class="rp_btn flat large active js_category_trigger">家居用品</a>
-            <a href="./product2.html" class="rp_btn flat large js_category_trigger">玩具学习</a>
-            <a href="./product3.html" class="rp_btn flat large js_category_trigger">出行工具</a>
-            <a href="./product4.html" class="rp_btn flat large js_category_trigger">洗护保洁</a>
-            <a href="./product5.html" class="rp_btn flat large js_category_trigger">电器安防</a>
-            <a href="./product6.html" class="rp_btn flat large js_category_trigger">尿布服饰</a>
-            <a href="./product7.html" class="rp_btn flat large js_category_trigger">喂养餐具</a>
-            <a href="./product8.html" class="rp_btn flat large js_category_trigger">奶粉辅食</a>
+            <a href="#" class="rp_btn image_btn flat large active js_category_trigger">
+                家居用品
+                <div class="image_holder">
+                    <img src="./img/base/jiajuyongpin.png">
+                </div>
+            </a>
+            <a href="./product2.html" class="rp_btn image_btn flat large js_category_trigger">
+                玩具学习
+                <div class="image_holder">
+                    <img src="./img/base/wanjuxuexi.png">
+                </div>
+            </a>
+            <a href="./product3.html" class="rp_btn image_btn flat large js_category_trigger">
+                出行工具
+                <div class="image_holder">
+                    <img src="./img/base/chuxinggongju.png">
+                </div>
+            </a>
+            <a href="./product4.html" class="rp_btn image_btn flat large js_category_trigger">洗护保洁</a>
+            <a href="./product5.html" class="rp_btn image_btn flat large js_category_trigger">电器安防</a>
+            <a href="./product6.html" class="rp_btn image_btn flat large js_category_trigger">
+                尿布服饰
+                <div class="image_holder">
+                    <img src="./img/base/niaobufushi.png">
+                </div>
+            </a>
+            <a href="./product7.html" class="rp_btn image_btn flat large js_category_trigger">
+                喂养餐具
+                <div class="image_holder">
+                    <img src="./img/base/weishicanju.png">
+                </div>
+            </a>
+            <a href="./product8.html" class="rp_btn image_btn flat large js_category_trigger">
+                奶粉辅食
+                <div class="image_holder">
+                    <img src="./img/base/naifenfushi.png">
+                </div>
+            </a>
         </div>
     </div>
     <div class="inner_body">
         <div class="container-fluid">
-            <div class="rp_toolbox accent mt-3 ">
+            <div class="rp_toolbox primary">
                 <div class="row px-3">
                     <div class="col-sm-4 col-lg filter_box">
                         <div class="rp_dropdown" tabindex="1">品牌牌子
@@ -121,18 +152,18 @@
             <div class="rp_divider"></div>
 
             <!--  products -->
-            <div class="overflow_x_container">
-                <button type="button" id="js_btn_left" class="rp_btn outline rp_btn--icon accent btn_left" style="position: absolute; left:0; top: calc(50% - 54px);">
-                    <i class="fas fa-angle-left grey--text"></i>
+            <div class="overflow_x_container" style="height: calc(60vh - 1rem);">
+                <button type="button" id="js_btn_left" class="rp_btn btn_left" style="left:0;">
+                    <i class="fas fa-chevron-left grey--text"></i>
                 </button>
-                <button type="button" id="js_btn_right" class="rp_btn outline rp_btn--icon accent btn_right" style="position: absolute; right:0; top: calc(50% - 54px);">
-                    <i class="fas fa-angle-right grey--text"></i>
+                <button type="button" id="js_btn_right" class="rp_btn btn_right" style="right:0;">
+                    <i class="fas fa-chevron-right grey--text"></i>
                 </button>
                 <div id="js_product_list_box" class="slider">
                     <div class="rp_product_box">
                         <div class="rp_product_card--reveal"></div>
                         <div class="rp_product_card">
-                            <div class="rp_card flat mb-5">
+                            <div class="rp_card flat">
                                 <div class="rp_product_card--media pa-3">
                                     <img class="media" src="img/products/abott.png">
                                 </div>
@@ -157,7 +188,7 @@
                     <div class="rp_product_box">
                         <div class="rp_product_card--reveal"></div>
                         <div class="rp_product_card">
-                            <div class="rp_card flat mb-5">
+                            <div class="rp_card flat">
                                 <div class="rp_product_card--media pa-3">
                                     <img class="media" src="img/products/hegen.png">
                                 </div>
@@ -182,7 +213,7 @@
                     <div class="rp_product_box">
                         <div class="rp_product_card--reveal"></div>
                         <div class="rp_product_card">
-                            <div class="rp_card flat mb-5">
+                            <div class="rp_card flat">
                                 <div class="rp_product_card--media pa-3">
                                     <img class="media" src="img/products/hipp.png">
                                 </div>
@@ -207,7 +238,7 @@
                     <div class="rp_product_box">
                         <div class="rp_product_card--reveal"></div>
                         <div class="rp_product_card">
-                            <div class="rp_card flat mb-5">
+                            <div class="rp_card flat">
                                 <div class="rp_product_card--media pa-3">
                                     <img class="media" src="img/products/hipp.png">
                                 </div>
@@ -232,9 +263,9 @@
                     <div class="rp_product_box">
                         <div class="rp_product_card--reveal"></div>
                         <div class="rp_product_card">
-                            <div class="rp_card flat mb-5">
-                                <div class="rp_product_card--media pa-3">
-                                    <img class="media" src="img/products/hipp.png">
+                            <div class="rp_card flat">
+                                <div class="rp_product_card--media wide pa-3">
+                                    <img class="media" src="img/products/pucky-cart.png">
                                 </div>
                             </div>
                             <div class="font_title">HiPP</div>
@@ -257,7 +288,7 @@
                     <div class="rp_product_box">
                         <div class="rp_product_card--reveal"></div>
                         <div class="rp_product_card">
-                            <div class="rp_card flat mb-5">
+                            <div class="rp_card flat">
                                 <div class="rp_product_card--media pa-3">
                                     <img class="media" src="img/products/hipp.png">
                                 </div>
@@ -285,24 +316,24 @@
     </div>
     <div class="help_box">
         <div class="row justify-content-center question_info_box">
-            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+            <button type="button" class="js_question_info rp_btn large outline round primary mr-3 hidden">
                 <span class="grey--text">第一责任制</span>
             </button>
-            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+            <button type="button" class="js_question_info rp_btn large outline round primary mr-3 hidden">
                 <span class="grey--text">7天无理退货</span>
             </button>
-            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+            <button type="button" class="js_question_info rp_btn large outline round primary mr-3 hidden">
                 <span class="grey--text">贴心的送货安装</span>
             </button>
-            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+            <button type="button" class="js_question_info rp_btn large outline round primary mr-3 hidden">
                 <span class="grey--text">尊贵超值积分</span>
             </button>
-            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+            <button type="button" class="js_question_info rp_btn large outline round primary mr-3 hidden">
                 <span class="grey--text">线下专属会员店</span>
             </button>
         </div>
         <div class="row justify-content-center">
-            <button type="button" id="js_help_button" class="rp_btn x_large rp_btn--icon accent help_button">
+            <button type="button" id="js_help_button" class="rp_btn x_large rp_btn--icon primary help_button">
                 <i class="fas grey--text"></i>
             </button>
         </div>

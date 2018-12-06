@@ -216,9 +216,14 @@
     background-color: transparent;
 }
 
-.accent--text {
+.primary--text {
     color: #faba15 !important;
     caret-color: #faba15 !important;
+}
+
+.accent--text {
+    color: #f44336 !important;
+    caret-color: #f44336 !important;
 }
 
 .transparent {
