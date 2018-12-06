@@ -6,16 +6,15 @@
     <title>Title</title>
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/base.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
-    <link href="css/rating.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
 </head>
 
-<body data-category="1">
+<body>
     <div id="js_overlay" class="overlay"></div>
     <div class="rp_swing_box">
         <figure class="suo_animation">
@@ -31,8 +30,8 @@
         </figure>
     </div>
     <div id="js_header" class="rp_header">
-        <div style="max-height: 4rem;">
-            <img src="img/base/royal-panda.png" style="max-height: 4rem;">
+        <div class="rp_logo">
+            <img src="img/base/royal-panda.png">
         </div>
         <div id="js_pandaImage" class="rp_panda_logo"></div>
         <div id="js_category_box" class="rp_category_box">
@@ -282,53 +281,52 @@
                     </div>
                 </div>
             </div>
-            <div class="pa-5">
-                <div class="row justify-content-center">
-                    <button type="button" id="js_help_button" class="rp_btn large rp_btn--icon outline accent help_button">
-                        <i class="fas grey--text"></i>
-                    </button>
-                </div>
-                <div class="row justify-content-center">
-                    <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_25s hidden">
-                        <span class="grey--text">第一责任制</span>
-                    </button>
-                    <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_5s hidden">
-                        <span class="grey--text">7天无理退货</span>
-                    </button>
-                    <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-0_75s hidden">
-                        <span class="grey--text">贴心的送货安装</span>
-                    </button>
-                    <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1s hidden">
-                        <span class="grey--text">尊贵超值积分</span>
-                    </button>
-                    <button type="button" class="js_question_info rp_btn large outline round accent mr-3 delay-1_25s hidden">
-                        <span class="grey--text">线下专属会员店</span>
-                    </button>
-
-                </div>
-            </div>
-            <div class="rp_footer">
-                <div class="partner mx-2">
-                    <img src="img/base/logo-footer.png">
-                </div>
-                <div class="copy_right">
-                    <div class="font_caption">&copy;RoyalPanda / 泸ICP备17033585号-1</div>
-                    <div class="font_caption" style="margin-top:6px;">地址: 中国上海市黄浦区广东路500号世界贸易大厦5楼</div>
-                </div>
-                <div class="flex_spacer"></div>
-                <div class="partner" style="margin-right:10px;">
-                    <img src="img/base/truste.png">
-                </div>
-                <div class="partner" style="margin-right:10px;">
-                    <img src="img/base/v-logo-a.png">
-                </div>
-                <div class="partner" style="margin-right:10px;">
-                    <img src="img/base/v-logo-b.png">
-                </div>
-                <div class="partner" style="margin-right:10px;">
-                    <img src="img/base/v-logo-c.png">
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="help_box">
+        <div class="row justify-content-center question_info_box">
+            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                <span class="grey--text">第一责任制</span>
+            </button>
+            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                <span class="grey--text">7天无理退货</span>
+            </button>
+            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                <span class="grey--text">贴心的送货安装</span>
+            </button>
+            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                <span class="grey--text">尊贵超值积分</span>
+            </button>
+            <button type="button" class="js_question_info rp_btn large outline round accent mr-3 hidden">
+                <span class="grey--text">线下专属会员店</span>
+            </button>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" id="js_help_button" class="rp_btn x_large rp_btn--icon accent help_button">
+                <i class="fas grey--text"></i>
+            </button>
+        </div>
+    </div>
+    <div class="rp_footer">
+        <div class="partner mx-2">
+            <img src="img/base/logo-footer.png">
+        </div>
+        <div class="copy_right">
+            <div class="font_caption">&copy;RoyalPanda / 泸ICP备17033585号-1</div>
+            <div class="font_caption" style="margin-top:6px;">地址: 中国上海市黄浦区广东路500号世界贸易大厦5楼</div>
+        </div>
+        <div class="flex_spacer"></div>
+        <div class="partner" style="margin-right:10px;">
+            <img src="img/base/truste.png">
+        </div>
+        <div class="partner" style="margin-right:10px;">
+            <img src="img/base/v-logo-a.png">
+        </div>
+        <div class="partner" style="margin-right:10px;">
+            <img src="img/base/v-logo-b.png">
+        </div>
+        <div class="partner" style="margin-right:10px;">
+            <img src="img/base/v-logo-c.png">
         </div>
     </div>
 </body>
