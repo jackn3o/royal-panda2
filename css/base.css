@@ -202,6 +202,10 @@
     font-size: 0.8rem;
 }
 
+.white--bg {
+    background-color: white;
+}
+
 .white--text {
     color: #fff !important;
     caret-color: #fff !important;
