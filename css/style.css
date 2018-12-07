@@ -221,7 +221,7 @@ body {
     background-image: url("../img/base/panda.png");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 3rem 1.2rem;
+    background-size: 2.8rem 1.4rem;
     padding-right: 4px;
     top: 6rem;
 }
@@ -230,7 +230,7 @@ body {
     background-image: url("../img/base/panda.gif");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 3.3rem 2.4rem;
+    background-size: 3rem 2.4rem;
 }
 
 .rp_content_title {
