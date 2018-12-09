@@ -871,7 +871,7 @@ body {
 @media only screen and (min-width: 1400px) {
     html,
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
     .rp_content_box {
         max-width: 1460px;
@@ -881,7 +881,7 @@ body {
 @media only screen and (min-width: 1750px) {
     html,
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
     .rp_content_box {
         max-width: 1460px;
@@ -895,7 +895,7 @@ body {
 @media only screen and (min-width: 1904px) {
     html,
     body {
-        font-size: 22px;
+        font-size: 18px;
     }
     .rp_content_box {
         max-width: 1785px;
