@@ -137,6 +137,14 @@ body {
     color: #fff;
 } */
 
+.rp_category_box .rp_btn.image_btn {
+    pointer-events: none;
+}
+
+.rp_category_box.active .rp_btn.image_btn {
+    pointer-events: auto;
+}
+
 .rp_category_box .rp_btn.image_btn .image_holder:before,
 .rp_category_box .rp_btn.image_btn .image_holder:after {
     content: "";

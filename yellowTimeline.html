@@ -279,7 +279,20 @@
     };
 
 
+    $(el_header).on('click', function (e) {
+        if (e.target.className.includes('js_category_trigger')) {
+            return;
+        }
+
+        if (e.target.id == 'js_pandaImage' && $(el_header).hasClass('active') == false) {
+            $(el_header).addClass('active')
+        } else {
+            $(el_header).removeClass('active')
+        }
+    });
+
     fn_init()
+
 </script>
 
 </html>
