@@ -95,6 +95,7 @@ body {
 .rp_header.active .rp_category_box {
     opacity: 1;
     transition-delay: .1s;
+    top: 9rem;
 }
 
 .rp_category_box {
@@ -104,7 +105,7 @@ body {
     max-width: 960px;
     align-items: center;
     position: absolute;
-    top: 9rem;
+    top: 0rem;
     opacity: 0;
     transition-timing-function: cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
@@ -117,32 +118,12 @@ body {
 .rp_category_box .rp_btn.image_btn {
     position: relative;
     overflow: hidden;
-}
-
-.rp_category_box .rp_btn[data-text="wanjuxuexi"]:after {}
-
-/* 
-.rp_category_box .rp_btn[data-text="wanjuxuexi"]:hover:before {
-    background-color: #fff;
-    color: #fff;
-} */
-
-/* .rp_category_box .rp_btn[data-text="wanjuxuexi"]:hover:after {
-    content: '';
-    background-image: url("../img/base/wanjuxuexi.png");
-    background-size: 2rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #fff;
-    color: #fff;
-} */
-
-.rp_category_box .rp_btn.image_btn {
     pointer-events: none;
 }
 
-.rp_category_box.active .rp_btn.image_btn {
-    pointer-events: auto;
+
+.rp_header.active .rp_category_box .rp_btn.image_btn {
+    pointer-events: initial;
 }
 
 .rp_category_box .rp_btn.image_btn .image_holder:before,
@@ -846,10 +827,12 @@ body {
 } */
 
 @media only screen and (max-width: 959px) {
+
     html,
     body {
         font-size: 13px;
     }
+
     .rp_content_box {
         padding: 1rem;
         width: initial;
@@ -857,43 +840,52 @@ body {
 }
 
 @media only screen and (min-width: 960px) {
+
     html,
     body {
         font-size: 14px;
     }
+
     .rp_content_box {
         max-width: 900px;
     }
 }
 
 @media only screen and (min-width: 1264px) {
+
     html,
     body {
         font-size: 15px;
     }
+
     .rp_content_box {
         max-width: 1185px;
     }
 }
 
 @media only screen and (min-width: 1400px) {
+
     html,
     body {
         font-size: 14px;
     }
+
     .rp_content_box {
         max-width: 1460px;
     }
 }
 
 @media only screen and (min-width: 1750px) {
+
     html,
     body {
         font-size: 16px;
     }
+
     .rp_content_box {
         max-width: 1460px;
     }
+
     .hiddenMdAndUp {
         display: none;
         flex: 0;
@@ -901,40 +893,48 @@ body {
 }
 
 @media only screen and (min-width: 1904px) {
+
     html,
     body {
         font-size: 18px;
     }
+
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2180px) {
+
     html,
     body {
         font-size: 26px !important;
     }
+
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2340px) {
+
     html,
     body {
         font-size: 32px !important;
     }
+
     .rp_content_box {
         max-width: 1980px;
     }
 }
 
 @media only screen and (min-width: 2500px) {
+
     html,
     body {
         font-size: 34px !important;
     }
+
     .rp_content_box {
         max-width: 2180px;
     }
