@@ -723,9 +723,9 @@ body {
     top: 50%;
     right: 1rem;
     margin-top: -3px;
-    border-width: .3rem .3rem 0 .3rem;
+    /* border-width: .3rem .3rem 0 .3rem;
     border-style: solid;
-    border-color: #fff transparent;
+    border-color: #fff transparent; */
 }
 
 .rp_dropdown .dropdown {
@@ -786,9 +786,10 @@ body {
 .rp_dropdown:focus,
 .rp_dropdown:active {
     background: #fff;
-    box-shadow: none;
-    border: .05rem solid rgba(0, 0, 0, 0.2);
-    border-bottom: none;
+    /* box-shadow: none; */
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, .4);
+    /* border: .05rem solid rgba(0, 0, 0, 0.2); */
+    /* border-bottom: none; */
     color: #757575;
     z-index: 3;
 }
