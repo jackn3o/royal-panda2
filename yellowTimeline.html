@@ -88,79 +88,135 @@
     <div class="inner_body">
         <div class="container-fluid mt-3">
             <!--  products -->
-            <div class="overflow_x_container">
+            <div id="js_overflow_box" class="overflow_x_container">
+                <div class="overflow_overlay"></div>
+                <input type="hidden" id="js_overflowItemCount" value="4" />
                 <button type="button" id="js_btn_left" class="rp_btn btn_left" style="left:0;">
-                    <i class="fas fa-chevron-left grey--text"></i>
+                    <i class="fas fa-chevron-left"></i>
                 </button>
                 <button type="button" id="js_btn_right" class="rp_btn btn_right" style="right:0;">
-                    <i class="fas fa-chevron-right grey--text"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </button>
                 <div id="js_product_list_box" class="slider product_detail_slider">
                     <div class="empty_placeholder"></div>
-                    <div class="rp_product_detail_box js_product_detail_box active">
+                    <div class="rp_product_detail_box wide js_product_detail_box active">
                         <div class="rp_card flat transparent flex-sm-fill">
                             <div class="rp_card--media">
-                                <img class="media" src="img/product-detail/hegen-main.png">
-                                <div class="dot" data-text="可搭配不同的配件" data-tooltip="left" style="left: 16%; top: 27%;"></div>
+                                <img class="media" src="img/product-detail/p1.png">
+                                <!-- <div class="dot" data-text="可搭配不同的配件" data-tooltip="left" style="left: 16%; top: 27%;"></div>
                                 <div class="dot" style="left:23%; top: 60%;"></div>
                                 <div class="dot" style="right: 23%; top: 38%;"></div>
-                                <div class="dot" style="right: 25%; bottom: 13%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rp_product_detail_box js_product_detail_box">
-                        <div class="rp_card flat transparent flex-sm-fill">
-                            <div class="rp_card--media">
-                                <img class="media" src="img/product-detail/hegen-1.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rp_product_detail_box js_product_detail_box">
-                        <div class="rp_card flat transparent flex-sm-fill">
-                            <div class="rp_card--media">
-                                <img class="media" src="img/product-detail/hegen-2.png">
+                                <div class="dot" style="right: 25%; bottom: 13%;"></div> -->
                             </div>
                         </div>
                     </div>
                     <div class="rp_product_detail_box wide js_product_detail_box">
                         <div class="rp_card flat transparent flex-sm-fill">
                             <div class="rp_card--media">
-                                <img class="media" src="img/product-detail/hegen-3.png">
+                                <img class="media" src="img/product-detail/p2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rp_product_detail_box wide js_product_detail_box">
+                        <div class="rp_card flat transparent flex-sm-fill">
+                            <div class="rp_card--media">
+                                <img class="media" src="img/product-detail/p3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rp_product_detail_box wide js_product_detail_box">
+                        <div class="rp_card flat transparent flex-sm-fill">
+                            <div class="rp_card--media">
+                                <img class="media" src="img/product-detail/p4.png">
                             </div>
                         </div>
                     </div>
                     <div class="empty_placeholder"></div>
                 </div>
 
-                <div style="position: absolute;bottom:-4rem; width:100%; height:4rem;" class="row justify-content-center align-items-center">
-                    <div id="js_product_description_box" class="rp_product_description_box">
+                <div id="js_product_description_box" style="position: absolute;bottom:-7rem; width:100%;" class="rp_product_description_box">
+                    <div class="row no-gutters">
                         <div class="product_title">
-                            HEGEN
+                            月亮湾/mima
                         </div>
-                        <div>
-                            <div style="font-weight: 500; font-size: 2rem;"> 婴儿多功能PPSU奶瓶</div>
-                            <div class="row justify-content-around mt-3">
-                                <button type="button" class="rp_btn outline rp_btn--icon primary">
-                                    <i class="fas fa-angle-left grey--text"></i>
-                                </button>
-                                <button type="button" class="rp_btn outline rp_btn--icon primary">
-                                    <i class="fas fa-angle-left grey--text"></i>
-                                </button>
-                                <button type="button" class="rp_btn outline rp_btn--icon primary">
-                                    <i class="fas fa-angle-left grey--text"></i>
-                                </button>
-                                <button type="button" class="rp_btn outline rp_btn--icon primary">
-                                    <i class="fas fa-angle-left grey--text"></i>
-                                </button>
-                                <button type="button" class="rp_btn outline rp_btn--icon primary">
-                                    <i class="fas fa-angle-left grey--text"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div style="font-weight: 300; font-size: 1.5rem;">
+                        <div style="font-weight: 500; font-size: 1.8rem; flex:1;"> [西班牙进口] Mima-MoonII可调档高端婴童喂养餐椅</div>
+                        <div class="product_price">
                             <div>238 元</div>
-                            <button type="button" id="js_more_button" class="rp_btn">More</button>
+                            <button type="button" id="js_more_button" class="rp_btn rp_btn--icon more_button">
+                                <i class="fas fa-angle-up grey--text"></i>
+                            </button>
                         </div>
+                    </div>
+                    <div style="flex:1" class="rp_product_spec_box row no-gutters justify-content-between">
+                        <div style="width: 12rem;"></div>
+                        <div style="flex: 1;" class="row justify-content-between flex-column">
+                            <div>
+                                <div>产品品牌</div>
+                                <div>月亮湾/mima</div>
+                                <div>原产地</div>
+                                <div>西班牙</div>
+                                <div>材质</div>
+                                <div>组件材质</div>
+                                <div>铝管、铁管、塑胶、气压棒</div>
+                                <div>产品重量</div>
+                                <div>整体：10.5KG承重：45KG</div>
+                            </div>
+                            <div>
+                                <div>
+                                    产品特点
+                                </div>
+                                <div>
+                                    <div>
+                                        1、安全稳重不易倒
+                                    </div>
+                                    <div>
+                                        2、时尚高端扩展性强
+                                    </div>
+                                    <div>
+                                        3、含脚踏板、配件齐全
+                                    </div>
+                                </div>
+                                <div>
+                                    规格尺寸
+                                </div>
+                                <div>
+                                    产品尺寸 | 长*宽*高
+                                    面对餐椅：55*65*119.5CM
+                                    餐盘可调节高度区域=71CM~89CM
+                                </div>
+                                <div>
+                                    规格尺寸
+                                </div>
+                                <div>
+                                    产品尺寸 | 长*宽*高
+                                    面对餐椅：55*65*119.5CM
+                                </div>
+                                <div>
+                                    颜色分类
+                                </div>
+                                <div>
+                                    炫酷黑/360度调整
+                                </div>
+                            </div>
+                            <div class="product_price"></div>
+                        </div>
+                    </div>
+                    <div style="width:100%" class="row justify-content-around mt-3">
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                            <i class="fas fa-angle-left grey--text"></i>
+                        </button>
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                            <i class="fas fa-angle-left grey--text"></i>
+                        </button>
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                            <i class="fas fa-angle-left grey--text"></i>
+                        </button>
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                            <i class="fas fa-angle-left grey--text"></i>
+                        </button>
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                            <i class="fas fa-angle-left grey--text"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -173,7 +229,12 @@
     var el_header = document.querySelector('#js_header'),
         el_productListBox = document.querySelector('#js_product_list_box'),
         el_productDetails = document.querySelectorAll('.js_product_detail_box'),
-        el_moreButton = document.querySelector('#js_more_button');
+        el_moreButton = document.querySelector('#js_more_button'),
+        el_itemCountHiddenField = document.querySelector('#js_overflowItemCount'),
+        el_leftButton = document.querySelector('#js_btn_left'),
+        el_rightButton = document.querySelector('#js_btn_right'),
+        nb_itemIndex = 1,
+        nb_itemCount = 0;
 
     var fn_scrollTo = function (element, scrollPixels, duration) {
         var scrollPos = element.scrollLeft;
@@ -204,6 +265,8 @@
 
             //Call requestAnimationFrame on scroll function first time
             window.requestAnimationFrame(scroll);
+
+            fn_setIndex();
         }
     };
 
@@ -233,23 +296,23 @@
             nb_scrollTo = el_currentActive.clientWidth;
         }
 
-        return nb_scrollTo
+        return nb_scrollTo;
     }
 
-    $('#js_btn_left').on('click', function () {
+    $(el_leftButton).on('click', function () {
         fn_swipeLeft();
     });
 
-    $('#js_btn_right').on('click', function () {
+    $(el_rightButton).on('click', function () {
         fn_swipeRight();
     });
 
 
     $(el_moreButton).on('click', function () {
-        var el_aciveItem = el_productListBox.querySelector('.js_product_detail_box.active');
-        var el_descriptionBox = document.querySelector('#js_product_description_box');
-        $(el_aciveItem).addClass('float');
-        $(el_descriptionBox).addClass('float');
+        var el_overflowBox = document.querySelector('#js_overflow_box');
+        // var el_descriptionBox = document.querySelector('#js_product_description_box');
+        $(el_overflowBox).addClass('float');
+        // $(el_descriptionBox).addClass('float');
     });
 
     $(el_productListBox).on('click', '.js_product_detail_box', function () {
@@ -268,11 +331,28 @@
         fn_scrollTo(el_productListBox, nb_scrollTo, 600);
     });
 
+    var fn_setIndex = function () {
+        var el_activeItem = el_productListBox.querySelector('.js_product_detail_box.active'),
+            arr_nodes = Array.prototype.slice.call(el_productListBox.children);
+        nb_itemIndex = arr_nodes.indexOf(el_activeItem) || 1;
+
+        if (nb_itemIndex > nb_itemCount - 1) {
+            $(el_rightButton).addClass('disabled')
+        } else if (nb_itemIndex <= 1) {
+            $(el_leftButton).addClass('disabled')
+        } else {
+            $(el_leftButton).removeClass('disabled')
+            $(el_rightButton).removeClass('disabled')
+        }
+    };
+
     var fn_init = function () {
         var el_currentActive = document.querySelector('.js_product_detail_box.active'),
             nb_scrollTo = 0;
+
+        nb_itemCount = Number.parseInt(el_itemCountHiddenField.value) || 0;
         if (js_product_list_box.scrollWidth && el_currentActive.clientWidth) {
-            nb_scrollTo = el_currentActive.clientWidth / 2
+            nb_scrollTo = el_currentActive.clientWidth / 2 + 16
         }
 
         fn_scrollTo(el_productListBox, nb_scrollTo, 600);

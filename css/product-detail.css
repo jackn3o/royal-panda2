@@ -4,7 +4,7 @@
 
 .rp_product_detail_box {
     max-height: 28rem;
-    min-width: 20rem;
+    min-width: 26rem;
     height: 100%;
     display: flex;
     position: relative;
@@ -138,10 +138,48 @@
     position: absolute;
 }
 
+.overflow_x_container .overflow_overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    z-index: 1;
+}
+
+.overflow_x_container.float .overflow_overlay {
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.btn_left.disabled,
+.btn_right.disabled,
+.overflow_x_container.float .btn_left,
+.overflow_x_container.float .btn_right {
+    pointer-events: none;
+    color: #d2d2d2;
+}
+
+.rp_product_detail_box.wide {
+    min-width: 25rem;
+    min-height: 17rem;
+}
+
 .rp_product_detail_box.wide .rp_card--media .media {
-    min-width: 56rem;
+    min-width: 24rem;
+    min-height: 16rem;
+}
+
+/* .rp_product_detail_box.wide .rp_card--media .media {
+    min-width: 52rem;
     min-height: 26rem;
 }
+
+*/
 
 .rp_product_detail_box.active .rp_card--media .media,
 .rp_product_detail_box .rp_card--media .media:hover {
@@ -155,30 +193,46 @@
     -moz-transform: scale(1);
 }
 
+.slider .empty_placeholder {
+    min-width: 50vw;
+    width: 50vw;
+    height: 100%;
+}
+
 .rp_product_description_box {
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     width: 100%;
-    max-width: 60rem;
-    padding: 1rem;
+    max-width: 72rem;
+    padding: 1rem 3rem;
     background: #fff;
-    height: 7rem;
+    height: 9rem;
     box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12) !important;
     transition: height 1s ease-in-out;
     transition-delay: .5s;
+    z-index: 2;
+    flex-direction: column;
+}
+
+.rp_product_description_box .product_title,
+.rp_product_description_box .product_price {
+    display: flex;
+    font-weight: 300;
+    font-size: 1.4rem;
+    align-items: flex-start;
 }
 
 .rp_product_description_box .product_title {
-    font-weight: 400;
-    font-size: 1.5rem;
+    justify-content: flex-start;
+    width: 12.5rem;
 }
 
-.rp_product_description_box.float .product_title {
-    opacity: 0;
-    transition-delay: .25s;
-    transition: .4s cubic-bezier(.5, 0, .3, 1);
+.rp_product_description_box .product_price {
+    justify-content: flex-end;
+    width: 12.5rem;
+    width: 8rem;
 }
 
 .rp_product_description_box img {
@@ -188,31 +242,53 @@
     transition-delay: .5s;
 }
 
-.rp_product_description_box.float {
-    height: 26rem;
+.overflow_x_container.float .rp_product_description_box .product_title {
+    opacity: 0;
+    transition-delay: .25s;
+    transition: .4s cubic-bezier(.5, 0, .3, 1);
 }
 
-.rp_product_description_box.float img {
+.overflow_x_container.float .rp_product_description_box {
+    height: 30rem;
+}
+
+.overflow_x_container.float .rp_product_description_box img {
     transform: scale(1);
 }
 
-.slider .empty_placeholder {
-    min-width: 50%;
-}
-
-.rp_product_detail_box.active.float .rp_card--media .media {
+.overflow_x_container.float .rp_product_detail_box.active.wide .media {
     /* position: fixed;
     left: 18rem;
     top: 10rem;
     /* -webkit-transition: all 1s ease-out; */
     /* opacity: 0; */
-    transform: translateX(-20rem);
+    transform: translateX(-25rem);
     transition: all 1s ease;
     z-index: 3;
 }
 
-.rp_product_detail_box.active.float .rp_card--media .dot {
+.overflow_x_container.float .rp_product_detail_box.active.wide .media {
+    transform: translateX(-42rem);
+}
+
+.overflow_x_container.float .rp_card--media .dot {
     animation-delay: 0;
     transition-delay: 0;
     opacity: 0;
+}
+
+.overflow_x_container.float .rp_product_description_box .rp_product_spec_box {
+    opacity: 1;
+}
+
+.rp_product_spec_box {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+}
+
+.more_button {
+    margin-top: -0.2rem;
+    margin-left: 1rem;
 }

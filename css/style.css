@@ -121,7 +121,6 @@ body {
     pointer-events: none;
 }
 
-
 .rp_header.active .rp_category_box .rp_btn.image_btn {
     pointer-events: initial;
 }
@@ -424,6 +423,7 @@ body {
     font-size: 3rem;
     height: 100%;
     max-height: 100%;
+    color: #757575;
 }
 
 .rp_suo_menu {
@@ -828,12 +828,10 @@ body {
 } */
 
 @media only screen and (max-width: 959px) {
-
     html,
     body {
         font-size: 13px;
     }
-
     .rp_content_box {
         padding: 1rem;
         width: initial;
@@ -841,52 +839,43 @@ body {
 }
 
 @media only screen and (min-width: 960px) {
-
     html,
     body {
         font-size: 14px;
     }
-
     .rp_content_box {
         max-width: 900px;
     }
 }
 
 @media only screen and (min-width: 1264px) {
-
     html,
     body {
         font-size: 15px;
     }
-
     .rp_content_box {
         max-width: 1185px;
     }
 }
 
 @media only screen and (min-width: 1400px) {
-
     html,
     body {
         font-size: 14px;
     }
-
     .rp_content_box {
         max-width: 1460px;
     }
 }
 
 @media only screen and (min-width: 1750px) {
-
     html,
     body {
         font-size: 16px;
     }
-
     .rp_content_box {
         max-width: 1460px;
     }
-
     .hiddenMdAndUp {
         display: none;
         flex: 0;
@@ -894,48 +883,40 @@ body {
 }
 
 @media only screen and (min-width: 1904px) {
-
     html,
     body {
         font-size: 18px;
     }
-
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2180px) {
-
     html,
     body {
         font-size: 26px !important;
     }
-
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2340px) {
-
     html,
     body {
         font-size: 32px !important;
     }
-
     .rp_content_box {
         max-width: 1980px;
     }
 }
 
 @media only screen and (min-width: 2500px) {
-
     html,
     body {
         font-size: 34px !important;
     }
-
     .rp_content_box {
         max-width: 2180px;
     }
