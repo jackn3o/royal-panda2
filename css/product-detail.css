@@ -286,9 +286,23 @@
     display: flex;
     justify-content: center;
     transition: .3s cubic-bezier(.25, .8, .5, 1);
+    transition-delay: 1.25s;
+    padding: 1rem;
 }
 
 .more_button {
     margin-top: -0.2rem;
     margin-left: 1rem;
+}
+
+.spec_detail {
+    padding: 0.5rem 0;
+}
+
+.spec_detail>div {
+    line-height: 1.5;
+}
+
+.spec_detail b {
+    font-weight: 700;
 }
