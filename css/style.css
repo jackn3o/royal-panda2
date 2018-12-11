@@ -648,16 +648,20 @@ body {
 }
 
 .rp_btn--icon .fas {
+    font-size: 1rem;
+}
+
+.rp_btn--icon.large .fas {
     font-size: 1.4rem;
 }
 
 .rp_btn.outline {
     background-color: transparent !important;
-    border: .1rem solid;
+    border: 2px solid;
 }
 
-.rp_btn.rp_btn--icon.outline {
-    border: .2rem solid;
+.rp_btn.outline.large {
+    border-width: .1rem !important;
 }
 
 .rp_btn.x_large {
@@ -828,12 +832,10 @@ body {
 } */
 
 @media only screen and (max-width: 959px) {
-
     html,
     body {
         font-size: 13px;
     }
-
     .rp_content_box {
         padding: 1rem;
         width: initial;
@@ -841,52 +843,43 @@ body {
 }
 
 @media only screen and (min-width: 960px) {
-
     html,
     body {
         font-size: 14px;
     }
-
     .rp_content_box {
         max-width: 900px;
     }
 }
 
 @media only screen and (min-width: 1264px) {
-
     html,
     body {
         font-size: 15px;
     }
-
     .rp_content_box {
         max-width: 1185px;
     }
 }
 
 @media only screen and (min-width: 1400px) {
-
     html,
     body {
         font-size: 14px;
     }
-
     .rp_content_box {
         max-width: 1460px;
     }
 }
 
 @media only screen and (min-width: 1750px) {
-
     html,
     body {
         font-size: 16px;
     }
-
     .rp_content_box {
         max-width: 1460px;
     }
-
     .hiddenMdAndUp {
         display: none;
         flex: 0;
@@ -894,48 +887,40 @@ body {
 }
 
 @media only screen and (min-width: 1904px) {
-
     html,
     body {
         font-size: 18px;
     }
-
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2180px) {
-
     html,
     body {
         font-size: 26px !important;
     }
-
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2340px) {
-
     html,
     body {
         font-size: 32px !important;
     }
-
     .rp_content_box {
         max-width: 1980px;
     }
 }
 
 @media only screen and (min-width: 2500px) {
-
     html,
     body {
         font-size: 34px !important;
     }
-
     .rp_content_box {
         max-width: 2180px;
     }
@@ -958,4 +943,16 @@ body {
     position: absolute;
     left: 0;
     bottom: -0.25rem;
+}
+
+.rp_tabs .rp_btn {
+    border-radius: 12px;
+}
+
+.rp_tabs .rp_btn.active {
+    background-color: #faba15;
+    color: #faba15;
+    caret-color: #faba15;
+    border-color: #faba15;
+    color: #fff;
 }

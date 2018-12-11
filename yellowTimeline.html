@@ -112,7 +112,7 @@
                 </div>
 
                 <div id="js_product_description_box" class="rp_product_description_box">
-                    <div class="row no-gutters" style="min-height: 3rem;">
+                    <div class="row" style="min-height: 3rem;">
                         <div class="product_title">月亮湾/mima</div>
                         <div style="font-weight:500; font-size: 1.8rem; flex:1;">
                             [西班牙进口] Mima-MoonII可调档高端婴童喂养餐椅
@@ -132,58 +132,94 @@
                         <div class="combo_item"><img src="./img/product-detail/C5.png" /></div>
                     </div>
 
-                    <div style="flex:1" class="rp_product_spec_box row no-gutters justify-content-between">
+                    <div style="flex:1" class="rp_product_spec_box row justify-content-between">
                         <div style="width: 12rem;"></div>
                         <div style="flex: 1;" class="row">
                             <div id="js_tabs" class="rp_tabs col-12">
-                                <a href="#js_review_box" type="button" class="rp_btn primary white--text">REVIEW</a>
-                                <a href="#js_spec_box" type="button" class="rp_btn">SPEC</a>
+                                <a href="#js_option_box" class="rp_btn active">自制配套</a>
+                                <a href="#js_review_box" class="rp_btn">评价晒单</a>
+                                <a href="#js_spec_box" class="rp_btn">规格参数</a>
                                 <!-- <a type="button" class="rp_btn">RATING</a> -->
                             </div>
-                            <div id="js_review_box" class="row rp_tab" style="width:100%; padding: 1rem; height: 19rem;">
-                                <div class="review_box col-6" style="flex:1;">
-                                    <div class="review_title">
-                                        <div class="user_icon">
-                                            <img src="./img/base/panda.png">
-                                        </div>
-                                        <div class="review_title_info">
-                                            <div class="username">im Panda</div>
-                                            <div class="time">2018-Jan-01 03:33:33</div>
-                                        </div>
+                            <div id="js_option_box" class="rp_tab" style="width:100%; padding: 1rem; height: 19rem;">
+                                <div class="option_box">
+                                    <div class="option_title">颜色</div>
+                                    <div class="option_detail">
+                                        <div class="option_item">蓝色</div>
+                                        <div class="option_item">粉色</div>
                                     </div>
-                                    <div class="review_detail">
-                                        this is review
+                                </div>
+                                <div class="rp_divider"></div>
+                                <div class="option_box">
+                                    <div class="option_title">适用年龄</div>
+                                    <div class="option_detail">
+                                        <div class="option_item">4个月-3岁</div>
                                     </div>
-                                    <div class="review_rating">
-                                        <div class="js_rating_box rating_box active" data-rating="2.5" style="left: 1rem; bottom: 0.8rem;">
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
+                                </div>
+                                <div class="rp_divider"></div>
+                                <div class="option_box">
+                                    <div class="option_title">数量</div>
+                                    <div class="option_detail">
+                                        <button type="button" class="rp_btn outline rp_btn--icon primary mr-2">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" />
+                                        <button type="button" class="rp_btn outline rp_btn--icon primary ml-2">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="rp_divider"></div>
+                            </div>
+                            <div id="js_review_box" class="row rp_tab" style="width:100%; padding: 1rem; height: 19rem;"
+                                hidden>
+                                <div class="col-6" style="flex:1;">
+                                    <div class="review_box">
+                                        <div class="review_title">
+                                            <div class="user_icon">
+                                                <img src="./img/base/panda.png">
+                                            </div>
+                                            <div class="review_title_info">
+                                                <div class="username">im Panda</div>
+                                                <div class="time">2018-Jan-01 03:33:33</div>
+                                            </div>
+                                        </div>
+                                        <div class="review_detail">
+                                            this is review
+                                        </div>
+                                        <div class="review_rating">
+                                            <div class="js_rating_box rating_box active" data-rating="2.5" style="left: 1rem; bottom: 0.8rem;">
+                                                <i></i>
+                                                <i></i>
+                                                <i></i>
+                                                <i></i>
+                                                <i></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="review_box col-6" style="flex:1;">
-                                    <div class="review_title">
-                                        <div class="user_icon">
-                                            <img src="./img/base/panda.png">
+                                <div class="col-6" style="flex:1;">
+                                    <div class="review_box">
+                                        <div class="review_title">
+                                            <div class="user_icon">
+                                                <img src="./img/base/panda.png">
+                                            </div>
+                                            <div class="review_title_info">
+                                                <div class="username">im Panda</div>
+                                                <div class="time">2018-Jan-01 03:33:33</div>
+                                            </div>
                                         </div>
-                                        <div class="review_title_info">
-                                            <div class="username">im Panda</div>
-                                            <div class="time">2018-Jan-01 03:33:33</div>
+                                        <div class="review_detail">
+                                            this is review 22
                                         </div>
-                                    </div>
-                                    <div class="review_detail">
-                                        this is review 22
-                                    </div>
-                                    <div class="review_rating">
-                                        <div class="js_rating_box rating_box active" data-rating="2.5" style="left: 1rem; bottom: 0.8rem;">
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
+                                        <div class="review_rating">
+                                            <div class="js_rating_box rating_box active" data-rating="2.5" style="left: 1rem; bottom: 0.8rem;">
+                                                <i></i>
+                                                <i></i>
+                                                <i></i>
+                                                <i></i>
+                                                <i></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -226,20 +262,20 @@
                         </div>
                         <div class="product_price"></div>
                     </div>
-                    <div style="width:100%" class="row justify-content-around">
-                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                    <div style="width:100%" class="row justify-content-center">
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large mr-3">
                             <i class="fas fa-angle-left grey--text"></i>
                         </button>
-                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large mr-3">
                             <i class="fas fa-angle-left grey--text"></i>
                         </button>
-                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large mr-3">
                             <i class="fas fa-angle-left grey--text"></i>
                         </button>
-                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large mr-3">
                             <i class="fas fa-angle-left grey--text"></i>
                         </button>
-                        <button type="button" class="rp_btn outline rp_btn--icon primary large">
+                        <button type="button" class="rp_btn outline rp_btn--icon primary large mr-3">
                             <i class="fas fa-angle-left grey--text"></i>
                         </button>
                     </div>
@@ -349,7 +385,7 @@
 
         var nb_scrollTo = 0
         if (el_selectedDetail.offsetLeft && el_previousActive.offsetLeft) {
-            nb_scrollTo = el_selectedDetail.offsetLeft - el_previousActive.offsetLeft
+            nb_scrollTo = el_selectedDetail.offsetLeft - el_previousActive.offsetLeft - 16
         }
 
         fn_scrollTo(el_productListBox, nb_scrollTo, 600)
@@ -359,8 +395,8 @@
         var el_buttons = el_tabs.querySelectorAll('.rp_btn'),
             el_this = this;
 
-        $(el_buttons).removeClass('primary white--text');
-        $(el_this).addClass('primary white--text');
+        $(el_buttons).removeClass('active');
+        $(el_this).addClass('active');
 
         var str_activeBoxId = $(el_this).attr('href'),
             el_activeTab = document.querySelector(str_activeBoxId),
