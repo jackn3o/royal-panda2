@@ -163,12 +163,14 @@
     opacity: 0;
     transition: .3s cubic-bezier(.25, .8, .5, 1);
     z-index: 3;
+    transition-delay: .5s;
 }
 
 .overflow_x_container.float .overflow_overlay {
     bottom: 0;
     right: 0;
     opacity: 1;
+    transition-delay: .1s;
 }
 
 .btn_left.disabled,
@@ -179,7 +181,7 @@
     color: #d2d2d2;
 }
 
-.overflow_x_container.float .rp_product_detail_box:not(.active) {
+.overflow_x_container .rp_product_detail_box:not(.active) {
     z-index: 2;
 }
 
@@ -193,12 +195,6 @@
     min-height: 14rem;
 }
 
-/* .rp_product_detail_box.wide .rp_card--media .media {
-    min-width: 52rem;
-    min-height: 26rem;
-}
-
-*/
 
 .rp_product_detail_box.active .rp_card--media .media,
 .rp_product_detail_box .rp_card--media .media:hover {
@@ -231,7 +227,7 @@
     height: 12rem;
     box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12) !important;
     transition: height 1s ease-in-out;
-    transition-delay: .5s;
+    transition-delay: none;
     z-index: 3;
     flex-direction: column;
     position: absolute;
@@ -280,21 +276,21 @@
     transform: scale(1);
 } */
 
+.overflow_x_container .rp_product_detail_box.active.wide .media {
+    transform: translateX(0);
+    transition-delay: .75s;
+}
+
 .overflow_x_container.float .rp_product_detail_box.active.wide .media {
-    /* position: fixed;
-    left: 18rem;
-    top: 10rem;
-    /* -webkit-transition: all 1s ease-out; */
-    /* opacity: 0; */
     transform: translateX(-25rem);
-    transition-delay: 0;
+    transition-delay: none;
     transition: all 1s ease;
     z-index: 4;
 }
 
 .overflow_x_container.float .rp_product_detail_box.active.wide .media {
     transform: translateX(-40rem);
-    transition-delay: 0;
+    transition-delay: none;
 }
 
 .overflow_x_container.float .rp_card--media .dot {
@@ -312,7 +308,7 @@
     -ms-transform: scaleY(1);
     -moz-transition: all 250ms ease-in;
     -moz-transform: scaleY(1);
-    transition-delay: 1.25s;
+    transition-delay: .5s;
 }
 
 .overflow_x_container.float .more_button {
@@ -338,6 +334,7 @@
     -ms-transform: scaleY(0);
     -moz-transition: all 250ms ease-in;
     -moz-transform: scaleY(0);
+    transition-delay: .25s;
 }
 
 .rp_product_description_box .combo_box {
@@ -413,6 +410,7 @@
     border: 2px solid #eee;
     padding: 1rem;
     border-radius: 12px;
+    position: relative;
 }
 
 .review_title {
