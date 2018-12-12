@@ -1,0 +1,300 @@
+/* stylesheet require come after style.css */
+
+/* suo menu */
+
+.rp_swing_box {
+    position: fixed;
+    height: 7.5rem;
+    width: 7.5rem;
+    right: 1rem;
+    top: -2px;
+    z-index: 8;
+}
+
+.suo_animation {
+    animation: suoSwing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+}
+
+.suo_animation:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: suoShake 1.25s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+.rp_suo {
+    height: 100%;
+    width: 100%;
+}
+
+.rp_suo_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    margin-top: 2rem;
+    transition: 2s cubic-bezier(.25, .8, .5, 1);
+}
+
+.rp_suo_menu .suo_menu_icon {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -webkit-transform: scale(0);
+    -webkit-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -ms-transform: scale(0);
+    -moz-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -moz-transform: scale(0);
+}
+
+.rp_suo_menu .suo_menu_icon:nth-of-type(5) {
+    transition-delay: .15s;
+}
+
+.rp_suo_menu .suo_menu_icon:nth-of-type(4) {
+    transition-delay: .2s;
+}
+
+.rp_suo_menu .suo_menu_icon:nth-of-type(3) {
+    transition-delay: .3s;
+}
+
+.rp_suo_menu .suo_menu_icon:nth-of-type(2) {
+    transition-delay: .4s;
+}
+
+.rp_suo_menu .suo_menu_icon:nth-of-type(1) {
+    transition-delay: .5s;
+}
+
+.rp_suo_menu.active {
+    height: 75vh;
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    transition-delay: none;
+}
+
+.rp_suo_menu.active .suo_menu_icon {
+    opacity: 1;
+    transform: scale(1);
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -webkit-transform: scale(1);
+    -webkit-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -ms-transform: scale(1);
+    -moz-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -moz-transform: scale(1);
+}
+
+.rp_suo_menu.active .suo_menu_icon:nth-of-type(2) {
+    transition-delay: .1s;
+}
+
+.rp_suo_menu.active .suo_menu_icon:nth-of-type(3) {
+    transition-delay: .2s;
+}
+
+.rp_suo_menu.active .suo_menu_icon:nth-of-type(4) {
+    transition-delay: .3s;
+}
+
+.rp_suo_menu.active .suo_menu_icon:nth-of-type(5) {
+    transition-delay: .4s;
+}
+
+.rp_suo_menu.active .suo_menu_icon:nth-of-type(6) {
+    transition-delay: .5s;
+}
+
+.suo_menu_icon.search {
+    background-image: url('../img/base/search.png');
+}
+
+.suo_menu_icon.search:hover {
+    background-image: url('../img/base/search_hover.png');
+}
+
+.suo_menu_icon.huiyuan {
+    background-image: url('../img/base/huiyuan.png');
+}
+
+.suo_menu_icon.huiyuan:hover {
+    background-image: url('../img/base/huiyuan_hover.png');
+}
+
+.suo_menu_icon.cart {
+    background-image: url('../img/base/cart.png');
+}
+
+.suo_menu_icon.cart:hover {
+    background-image: url('../img/base/cart_hover.png');
+}
+
+.suo_menu_icon.kefu {
+    background-image: url('../img/base/kefu.png');
+}
+
+.suo_menu_icon.kefu:hover {
+    background-image: url('../img/base/kefu_hover.png');
+}
+
+.suo_menu_icon.feedback {
+    background-image: url('../img/base/feedback_gold.png');
+}
+
+@keyframes suoSwing {
+    0% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes suoShake {
+    0% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(0deg);
+    }
+    20% {
+        transform: translate(-2px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-2px, 0px) rotate(0deg);
+    }
+    70% {
+        transform: translate(2px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, 0) rotate(0deg);
+    }
+    90% {
+        transform: translate(0, 1px) rotate(1deg);
+    }
+    100% {
+        transform: translate(0, -1px) rotate(0deg);
+    }
+}
+
+/* help box */
+
+.help_box {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 7;
+}
+
+.help_box .rp_btn.help_button {
+    margin-top: 1rem;
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+}
+
+.help_box .rp_btn.help_button i {
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+}
+
+.help_box .rp_btn.help_button i::before {
+    content: "\f128";
+}
+
+.help_box .help_info_box {
+    display: flex;
+    justify-content: center;
+}
+
+.help_box .help_info_box .rp_btn {
+    opacity: 0;
+    transform: scaleY(0);
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -webkit-transform: scaleY(0);
+    -webkit-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -ms-transform: scaleY(0);
+    -moz-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -moz-transform: scaleY(0);
+}
+
+.help_box .help_info_box .rp_btn:nth-of-type(5) {
+    transition-delay: .05s;
+}
+
+.help_box .help_info_box .rp_btn:nth-of-type(4) {
+    transition-delay: .1s;
+}
+
+.help_box .help_info_box .rp_btn:nth-of-type(3) {
+    transition-delay: .15s;
+}
+
+.help_box .help_info_box .rp_btn:nth-of-type(2) {
+    transition-delay: .2s;
+}
+
+.help_box .help_info_box .rp_btn:nth-of-type(1) {
+    transition-delay: .25s;
+}
+
+/* active styling */
+
+.help_box.active .rp_btn.help_button i {
+    height: 1rem;
+    width: 1rem;
+    background-image: url(../img/base/undo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transition: all .3s cubic-bezier(.25, .8, .5, 1);
+}
+
+.help_box.active .rp_btn.help_button i:before {
+    content: '';
+}
+
+.help_box.active .help_info_box .rp_btn {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -webkit-transform: scaleY(1);
+    -webkit-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -ms-transform: scaleY(1);
+    -moz-transition: .3s cubic-bezier(.25, .8, .5, 1);
+    -moz-transform: scaleY(1);
+}
+
+.help_box.active .help_info_box .rp_btn:nth-of-type(2) {
+    transition-delay: .05s;
+}
+
+.help_box.active .help_info_box .rp_btn:nth-of-type(3) {
+    transition-delay: .1s;
+}
+
+.help_box.active .help_info_box .rp_btn:nth-of-type(4) {
+    transition-delay: .15s;
+}
+
+.help_box.active .help_info_box .rp_btn:nth-of-type(5) {
+    transition-delay: .2s;
+}
+
+.help_box.active .help_info_box .rp_btn:nth-of-type(6) {
+    transition-delay: .25s;
+}
