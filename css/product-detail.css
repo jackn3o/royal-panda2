@@ -2,7 +2,7 @@
     padding: 3rem;
 }
 
-.rp_product_detail_box {
+.overflow_x_container .rp_product_detail_box {
     max-height: 28rem;
     min-width: 26rem;
     height: 100%;
@@ -195,7 +195,6 @@
     min-height: 14rem;
 }
 
-
 .rp_product_detail_box.active .rp_card--media .media,
 .rp_product_detail_box .rp_card--media .media:hover {
     opacity: 1;
@@ -286,6 +285,10 @@
     transition-delay: none;
     transition: all 1s ease;
     z-index: 4;
+}
+
+.overflow_x_container.float .rp_product_detail_box {
+    pointer-events: none;
 }
 
 .overflow_x_container.float .rp_product_detail_box.active.wide .media {

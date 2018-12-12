@@ -694,7 +694,7 @@ body {
 @media only screen and (max-width: 959px) {
     html,
     body {
-        font-size: 13px;
+        font-size: 11px;
     }
     .rp_content_box {
         padding: 1rem;
@@ -705,7 +705,7 @@ body {
 @media only screen and (min-width: 960px) {
     html,
     body {
-        font-size: 14px;
+        font-size: 12px;
     }
     .rp_content_box {
         max-width: 900px;
@@ -715,7 +715,7 @@ body {
 @media only screen and (min-width: 1264px) {
     html,
     body {
-        font-size: 15px;
+        font-size: 13px;
     }
     .rp_content_box {
         max-width: 1185px;
@@ -739,10 +739,6 @@ body {
     }
     .rp_content_box {
         max-width: 1460px;
-    }
-    .hiddenMdAndUp {
-        display: none;
-        flex: 0;
     }
 }
 
