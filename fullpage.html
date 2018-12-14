@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/bamboo.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script src="lib/bamboo.min.js"></script>
+    <style>
+        .rp_fullpage_box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .navigation_box{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .navigation_box:before{
+            border-radius: inherit;
+            color: inherit;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            opacity: .12;
+            transition: .3s cubic-bezier(.25, .8, .5, 1);
+            width: 100%;
+        }
+
+        .navigation_box .rp_btn{
+            height: 4rem;
+            max-height: 4rem;
+            width:2.5rem;
+        }
+        .navigation_box .rp_btn:before{
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            background-color:rgba(255,255,255, 0.4);
+        }
+        .navigation_box .rp_btn i.fas{
+            font-size: 3rem;
+            color:#757575;
+        }
+
+        .bamboo>.bamboo-dots {
+            bottom:1%;
+        }
+</style>
+</head>
+
+<body>
+    <div id="js_fullpage_box" class="rp_fullpage_box">
+        <div class="navigation_box" style="left:0;">
+            <button type="button" id="js_prev_button" class="rp_btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+        <div class="navigation_box" style="right:0;">
+            <button type="button" id="js_next_button" class="rp_btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="slides">
+            <div>
+                <img src="./img/fullpage/puky-1.jpg" />
+            </div>
+            <div>
+                <img src="./img/fullpage/puky-2.jpg" />
+            </div>
+            <div>
+                <img src="./img/fullpage/puky-3.jpg" />
+            </div>
+            <div>
+                <img src="./img/fullpage/puky-4.jpg" />
+            </div>
+            <div>
+                <img src="./img/fullpage/puky-5.jpg" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var element = document.querySelector('#js_fullpage_box');
+
+        var sildeshow = bamboo(element, 'roll', {
+            autoPlay: false,
+            hideArrow: true,
+            prev: document.querySelector('#js_prev_button'),
+            next: document.querySelector('#js_next_button')
+        });
+    </script>
+</body>
+<script>
+
+</script>
+
+</html>
