@@ -99,6 +99,7 @@
     transform: translateX(-12rem);
     -webkit-transform: translateX(-12rem);
     transition-delay: 0;
+    border-radius: 12px;
 }
 
 .rp_product_box:hover .hover_menu .rp_btn {

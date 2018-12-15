@@ -84,6 +84,7 @@
     flex-wrap: wrap;
     align-content: baseline;
     padding-top: 3rem;
+    border-radius: 0.4rem;
 }
 
 .rp_category_card:hover .rp_category_card--hover .rp_btn {
@@ -135,6 +136,7 @@
     min-height: calc(15rem + 2px);
     height: calc(36vh + 2px);
     overflow: hidden;
+    border-radius: 0.4rem;
 }
 
 .video_container video {

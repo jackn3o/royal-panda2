@@ -52,7 +52,7 @@ body {
 }
 
 .rp_header~.inner_body2 {
-    padding-top: 7.5rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
     overflow-y: auto;
 }
@@ -187,16 +187,16 @@ body {
     background-image: url("../img/base/panda.png");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 2.8rem 1.4rem;
+    background-size: 2.4rem 2.4rem;
     padding-right: 4px;
-    top: 6rem;
+    top: 5.8rem;
+    cursor: pointer;
 }
 
 .rp_panda_logo:hover {
     background-image: url("../img/base/panda.gif");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 3rem 2.4rem;
 }
 
 .rp_content_title {
