@@ -346,10 +346,10 @@
             </div>
             <div id="js_compare_box" class="compare_box hidden">
                 <div>
-                    <div style="font-size: 1.8rem; font-weight: 600; line-height: 1.2;">最多能选 3个</div>
-                    <div style="font-size: 1.4rem; line-height: 1.2;">还能选择 <span id="js_balanceCompare">3</span>个</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; line-height: 1.5;">最多能选 3个</div>
+                    <div style="font-size: 1.4rem; line-height: 1.5;">还能选择 <span id="js_balanceCompare">3</span>个</div>
                 </div>
-                <button type="button" class="rp_btn round primary white--text ml-5" style="font-size: 2rem; max-height: 3rem; width: 9rem;">对比</button>
+                <button type="button" class="rp_btn round primary white--text ml-5" style="font-size: 1.6rem; height: 2.8rem; max-height: 2.8rem; width: 6em;">对比</button>
             </div>
         </div>
     </div>
@@ -403,6 +403,57 @@
 
 <script src="lib/base.js"></script>
 <script>
+
+    var el_productListBox = document.querySelector('#js_product_list_box');
+
+    var fn_scrollTo = function (element, scrollPixels, duration) {
+        var scrollPos = element.scrollLeft;
+        // Condition to check if scrolling is required
+        if (
+            !(
+                (scrollPos === 0 || scrollPixels > 0) &&
+                (element.clientWidth + scrollPos === element.scrollWidth || scrollPixels < 0)
+            )
+        ) {
+            // Get the start timestamp
+            var startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+            var scroll = function (timestamp) {
+                //Calculate the timeelapsed
+                var timeElapsed = timestamp - startTime;
+                //Calculate progress
+                var progress = Math.min(timeElapsed / duration, 1);
+                //Set the scrolleft
+                element.scrollLeft = scrollPos + scrollPixels * progress;
+                //Check if elapsed time is less then duration then call the requestAnimation, otherwise exit
+                if (timeElapsed < duration) {
+                    //Request for animation
+                    window.requestAnimationFrame(scroll);
+                } else {
+                    return;
+                }
+            }
+
+            //Call requestAnimationFrame on scroll function first time
+            window.requestAnimationFrame(scroll);
+        }
+    };
+
+    var fn_swipeLeft = function () {
+        fn_scrollTo(el_productListBox, -400, 600);
+    };
+
+    var fn_swipeRight = function () {
+        fn_scrollTo(el_productListBox, 400, 600);
+    };
+
+    $('#js_btn_left').on('click', function () {
+        fn_swipeLeft();
+    });
+
+    $('#js_btn_right').on('click', function () {
+        fn_swipeRight();
+    });
+
     var el_compareButtons = document.querySelectorAll('.js_compare_button');
 
     $(el_compareButtons).on('click', function () {

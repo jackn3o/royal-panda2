@@ -92,7 +92,7 @@
     <div class="inner_body">
         <div class="container-fluid mt-3">
             <!-- products -->
-            <div id="js_overflow_box" class="overflow_x_container float">
+            <div id="js_overflow_box" class="overflow_x_container">
                 <div class="overflow_overlay"></div>
                 <input type="hidden" id="js_overflowItemCount" value="4" />
                 <button type="button" id="js_btn_left" class="rp_btn btn_left" style="left:0;">
@@ -434,6 +434,7 @@
     }
 
     var fn_getSlidingWidth = function (isNext) {
+        debugger
         var el_currentActive = document.querySelector('.js_product_detail_box.active'),
             el_nextActive = null
 
@@ -462,13 +463,6 @@
         fn_swipeRight()
     })
 
-    $(el_moreButton).on('click', function () {
-        var el_overflowBox = document.querySelector('#js_overflow_box')
-        // var el_descriptionBox = document.querySelector('#js_product_description_box');
-        $(el_overflowBox).toggleClass('float')
-        // $(el_descriptionBox).addClass('float');
-    })
-
     $(el_productListBox).on('click', '.js_product_detail_box', function () {
         var el_selectedDetail = this,
             el_previousActive = el_productListBox.querySelector('.js_product_detail_box.active')
@@ -482,6 +476,26 @@
         }
 
         fn_scrollTo(el_productListBox, nb_scrollTo, 600)
+    })
+
+    var fn_setIndex = function () {
+        var el_activeItem = el_productListBox.querySelector('.js_product_detail_box.active'),
+            arr_nodes = Array.prototype.slice.call(el_productListBox.children),
+            nb_itemIndex = arr_nodes.indexOf(el_activeItem) || 1
+
+        if (nb_itemIndex > nb_itemCount - 1) {
+            $(el_rightButton).addClass('disabled')
+        } else if (nb_itemIndex <= 1) {
+            $(el_leftButton).addClass('disabled')
+        } else {
+            $(el_leftButton).removeClass('disabled')
+            $(el_rightButton).removeClass('disabled')
+        }
+    }
+
+    $(el_moreButton).on('click', function () {
+        var el_overflowBox = document.querySelector('#js_overflow_box')
+        $(el_overflowBox).toggleClass('float')
     })
 
     $(el_tabs).on('click', '.rp_btn', function () {
@@ -508,20 +522,7 @@
 
         el_quantityLabel.value = nb_quantity == 1 ? 1 : nb_quantity - 1;
     });
-    var fn_setIndex = function () {
-        var el_activeItem = el_productListBox.querySelector('.js_product_detail_box.active'),
-            arr_nodes = Array.prototype.slice.call(el_productListBox.children)
-        nb_itemIndex = arr_nodes.indexOf(el_activeItem) || 1
 
-        if (nb_itemIndex > nb_itemCount - 1) {
-            $(el_rightButton).addClass('disabled')
-        } else if (nb_itemIndex <= 1) {
-            $(el_leftButton).addClass('disabled')
-        } else {
-            $(el_leftButton).removeClass('disabled')
-            $(el_rightButton).removeClass('disabled')
-        }
-    }
 
     var fn_init = function () {
         var el_currentActive = document.querySelector('.js_product_detail_box.active'),
@@ -535,17 +536,6 @@
         fn_scrollTo(el_productListBox, nb_scrollTo, 600)
     }
 
-    $(el_header).on('click', function (e) {
-        if (e.target.className.includes('js_category_trigger')) {
-            return
-        }
-
-        if (e.target.id == 'js_pandaImage' && $(el_header).hasClass('active') == false) {
-            $(el_header).addClass('active')
-        } else {
-            $(el_header).removeClass('active')
-        }
-    })
 
     fn_init()
 </script>
