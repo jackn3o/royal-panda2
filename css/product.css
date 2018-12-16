@@ -95,7 +95,6 @@
 .rp_product_box .hover_menu .rp_btn {
     opacity: 0;
     width: 9rem;
-    min-width: 140px;
     transform: translateX(-12rem);
     -webkit-transform: translateX(-12rem);
     transition-delay: 0;
