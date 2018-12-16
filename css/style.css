@@ -341,24 +341,13 @@ body {
     width: 100%;
 }
 
-/* to do */
-
 .overflow_x_container {
     display: flex;
     justify-content: center;
     padding: 0 2.5rem;
     position: relative;
+    height: calc(60vh - 3rem);
 }
-
-/* .overflow_x_container:before {
-    content: '';
-    top: 0;
-    bottom: 0;
-    width: 3rem;
-    filter: blur(2px);
-} */
-
-/* todo fix later */
 
 .overflow_x_container:before {
     content: "";
@@ -390,7 +379,7 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 2rem 0;
 }
 
 .overflow_x_container .btn_left,
@@ -709,7 +698,7 @@ body {
 @media only screen and (min-width: 960px) {
     html,
     body {
-        font-size: 12px;
+        font-size: 11px;
     }
     .rp_content_box {
         max-width: 900px;
@@ -719,7 +708,7 @@ body {
 @media only screen and (min-width: 1264px) {
     html,
     body {
-        font-size: 14px;
+        font-size: 13px;
     }
     .rp_content_box {
         max-width: 1185px;
@@ -769,7 +758,7 @@ body {
 @media only screen and (min-width: 2340px) {
     html,
     body {
-        font-size: 32px !important;
+        font-size: 30px !important;
     }
     .rp_content_box {
         max-width: 1980px;
@@ -779,7 +768,7 @@ body {
 @media only screen and (min-width: 2500px) {
     html,
     body {
-        font-size: 34px !important;
+        font-size: 32px !important;
     }
     .rp_content_box {
         max-width: 2180px;
@@ -851,4 +840,90 @@ body {
     caret-color: #faba15;
     border-color: #faba15;
     color: #fff;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+
+.snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 22rem;
+    /* Set a default minimum width */
+    margin-left: -11rem;
+    /* Divide value of min-width by 2 */
+    background-color: #696969;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 12px;
+    /* Rounded borders */
+    padding: 1.2rem;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 4;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 6rem;
+    /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+.snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 6rem;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 6rem;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 6rem;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 6rem;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
 }

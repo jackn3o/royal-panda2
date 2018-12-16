@@ -105,6 +105,10 @@
     margin-left: .1rem !important;
 }
 
+.ml-5 {
+    margin-left: 2rem !important;
+}
+
 .mx-0 {
     margin-left: 0 !important;
     margin-right: 0 !important;

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
@@ -11,6 +12,7 @@
     <link href="css/product.css" rel="stylesheet" type="text/css">
     <link href="css/overlay-menu.css" rel="stylesheet" type="text/css">
     <link href="css/rating.css" rel="stylesheet" type="text/css">
+    <link href="css/iconFont.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <script src="lib/jquery-3.3.1.slim.min.js"></script>
@@ -18,6 +20,7 @@
 
 <body>
     <div id="js_overlay" class="overlay"></div>
+    <div id="js_snackbar" class="snackbar"></div>
     <div class="rp_swing_box">
         <figure class="suo_animation">
             <img id="js_suoMenuTrigger" class="rp_suo" src="img/base/suo.png">
@@ -169,7 +172,7 @@
             <div class="rp_divider"></div>
 
             <!--  products -->
-            <div class="overflow_x_container" style="height: calc(60vh - 1rem);">
+            <div class="overflow_x_container">
                 <button type="button" id="js_btn_left" class="rp_btn btn_left" style="left:0;">
                     <i class="fas fa-chevron-left grey--text"></i>
                 </button>
@@ -198,6 +201,9 @@
                             <div class="hover_menu">
                                 <div class="rp_btn add_card_button">加入购物车</div>
                                 <div class="rp_btn buy_now_button">立刻购买</div>
+                                <div class="js_compare_button rp_btn rp_btn--icon compare_button">
+                                    <i class="iconfont icon-compare"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,6 +228,9 @@
                             <div class="hover_menu">
                                 <div class="rp_btn add_card_button">加入购物车</div>
                                 <div class="rp_btn buy_now_button">立刻购买</div>
+                                <div class="js_compare_button rp_btn rp_btn--icon compare_button">
+                                    <i class="iconfont icon-compare"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -246,6 +255,9 @@
                             <div class="hover_menu">
                                 <div class="rp_btn add_card_button">加入购物车</div>
                                 <div class="rp_btn buy_now_button">立刻购买</div>
+                                <div class="js_compare_button rp_btn rp_btn--icon compare_button">
+                                    <i class="iconfont icon-compare"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -270,6 +282,9 @@
                             <div class="hover_menu">
                                 <div class="rp_btn add_card_button">加入购物车</div>
                                 <div class="rp_btn buy_now_button">立刻购买</div>
+                                <div class="js_compare_button rp_btn rp_btn--icon compare_button">
+                                    <i class="iconfont icon-compare"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -294,6 +309,9 @@
                             <div class="hover_menu">
                                 <div class="rp_btn add_card_button">加入购物车</div>
                                 <div class="rp_btn buy_now_button">立刻购买</div>
+                                <div class="js_compare_button rp_btn rp_btn--icon compare_button">
+                                    <i class="iconfont icon-compare"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -318,10 +336,20 @@
                             <div class="hover_menu">
                                 <div class="rp_btn add_card_button">加入购物车</div>
                                 <div class="rp_btn buy_now_button">立刻购买</div>
+                                <div class="rp_btn rp_btn--icon">
+                                    <i class="iconfont icon-compare"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="js_compare_box" class="compare_box hidden">
+                <div>
+                    <div style="font-size: 1.8rem; font-weight: 600; line-height: 1.2;">最多能选 3个</div>
+                    <div style="font-size: 1.4rem; line-height: 1.2;">还能选择 <span id="js_balanceCompare">3</span>个</div>
+                </div>
+                <button type="button" class="rp_btn round primary white--text ml-5" style="font-size: 2rem; max-height: 3rem; width: 9rem;">对比</button>
             </div>
         </div>
     </div>
@@ -374,5 +402,56 @@
 </body>
 
 <script src="lib/base.js"></script>
+<script>
+    var el_compareButtons = document.querySelectorAll('.js_compare_button');
+
+    $(el_compareButtons).on('click', function () {
+        if (fn_getCompareCount() >= 3) {
+            fn_showSnackbar('最多只能对比3个');
+            return
+        }
+        var el_this = this,
+            $el_parentBox = $(el_this).closest('.rp_product_box');
+
+        $el_parentBox.toggleClass('active');
+        fn_setCompareBoxStyle();
+    });
+
+    var fn_getCompareCount = function () {
+        var nb_compare = $('.rp_product_box.active').length || 0;
+
+        return nb_compare;
+    };
+
+    var fn_setCompareBoxStyle = function () {
+        var nb_compare = fn_getCompareCount(),
+            el_compareBox = document.querySelector('#js_compare_box');
+
+        if (nb_compare == 0) {
+            $(el_compareBox).addClass('hidden');
+            return
+        }
+
+        var el_balanceCountLabel = document.querySelector('#js_balanceCompare');
+
+        $(el_compareBox).removeClass('hidden');
+        el_balanceCountLabel.innerHTML = 3 - nb_compare;
+    };
+
+    var fn_showSnackbar = function (str_message) {
+        var el_snackbar = document.querySelector('.snackbar');
+        // Set message
+        el_snackbar.innerHTML = str_message;
+
+        // Add the "show" class to DIV
+        $(el_snackbar).addClass('show');
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+            $(el_snackbar).removeClass('show');
+            el_snackbar.innerHTML = '';
+        }, 2000);
+    }
+</script>
 
 </html>

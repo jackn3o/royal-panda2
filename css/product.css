@@ -52,31 +52,6 @@
     margin-bottom: 5rem;
 }
 
-.rp_product_box:hover .rp_product_card--reveal {
-    background: #ffdf62;
-    opacity: 1;
-    transform: scale(1);
-    transition: all 300ms ease-in;
-    -webkit-transform: scale(1);
-    -webkit-transition: all 300ms ease-in;
-    -ms-transform: scale(1);
-    -moz-transition: all 300ms ease-in;
-    -moz-transform: scale(1);
-    -moz-transform: scale(1);
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12) !important;
-}
-
-.rp_product_box:hover .rp_product_card--media img {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -webkit-transition: all 150ms ease-in;
-    -ms-transform: scale(1);
-    -moz-transition: all 150ms ease-in;
-    -moz-transform: scale(1);
-    transition: all 150ms ease-in;
-    transition-delay: 200ms;
-}
-
 .rp_product_box .hover_menu {
     position: absolute;
     top: 0;
@@ -101,12 +76,6 @@
     border-radius: 12px;
 }
 
-.rp_product_box:hover .hover_menu .rp_btn {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    opacity: 1;
-}
-
 .rp_product_box .rp_btn.add_card_button {
     top: 4rem;
     background-color: #FF5722;
@@ -120,14 +89,6 @@
     border: 1px solid #FF5722;
     color: rgba(87, 90, 93, 255);
     transition-delay: 0;
-}
-
-.rp_product_box:hover .rp_btn.add_card_button {
-    transition-delay: .25s;
-}
-
-.rp_product_box:hover .rp_btn.buy_now_button {
-    transition-delay: .45s;
 }
 
 .rp_product_card--media {
@@ -163,4 +124,136 @@
     -moz-transition: all 300ms ease-out;
     -moz-transform: scale(0.85);
     transition: all 300ms ease-out;
+}
+
+.rp_product_box .hover_menu .compare_button {
+    position: absolute;
+    bottom: 0rem;
+    right: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(0);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(0);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(0);
+    transition: all 200ms ease-in;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.rp_product_box .hover_menu .compare_button i {
+    font-size: 1.2rem;
+}
+
+.rp_product_box.active .rp_product_card--reveal,
+.rp_product_box:hover .rp_product_card--reveal {
+    background: #ffdf62;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms ease-in;
+    -webkit-transform: scale(1);
+    -webkit-transition: all 300ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 300ms ease-in;
+    -moz-transform: scale(1);
+    -moz-transform: scale(1);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+.rp_product_box.active .rp_product_card--media img,
+.rp_product_box:hover .rp_product_card--media img {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -webkit-transition: all 150ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 150ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 150ms ease-in;
+    transition-delay: 200ms;
+}
+
+.rp_product_box.active .hover_menu .rp_btn,
+.rp_product_box:hover .hover_menu .rp_btn {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    opacity: 1;
+}
+
+.rp_product_box.active .rp_btn.add_card_button,
+.rp_product_box:hover .rp_btn.add_card_button {
+    transition-delay: .25s;
+}
+
+.rp_product_box.active .rp_btn.buy_now_button,
+.rp_product_box:hover .rp_btn.buy_now_button {
+    transition-delay: .45s;
+}
+
+.rp_product_box.active .hover_menu .compare_button,
+.rp_product_box:hover .hover_menu .compare_button {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -webkit-transition: all 150ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 150ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 150ms ease-in;
+    transition-delay: 200ms;
+    opacity: 1;
+    transition-delay: .25s;
+}
+
+.rp_product_box.active .hover_menu .compare_button {
+    color: #f44336;
+}
+
+.rp_product_box.active .rating_box i,
+.rp_product_box:hover .rating_box i {
+    -webkit-animation: stretch-bounce .5s ease-in-out;
+    -webkit-transition: all 100ms ease-in;
+    -ms-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    opacity: 1;
+}
+
+.rp_product_box.active .rating_box i:nth-of-type(1),
+.rp_product_box:hover .rating_box i:nth-of-type(1) {
+    animation-delay: .60s;
+    transition-delay: .60s;
+}
+
+.rp_product_box.active .rating_box i:nth-of-type(2),
+.rp_product_box:hover .rating_box i:nth-of-type(2) {
+    animation-delay: .70s;
+    transition-delay: .70s;
+}
+
+.rp_product_box.active .rating_box i:nth-of-type(3),
+.rp_product_box:hover .rating_box i:nth-of-type(3) {
+    animation-delay: .80s;
+    transition-delay: .80s;
+}
+
+.rp_product_box.active .rating_box i:nth-of-type(4),
+.rp_product_box:hover .rating_box i:nth-of-type(4) {
+    animation-delay: .90s;
+    transition-delay: .90s;
+}
+
+.rp_product_box.active .rating_box i:nth-of-type(5),
+.rp_product_box:hover .rating_box i:nth-of-type(5) {
+    animation-delay: 1s;
+    transition-delay: 1s;
+}
+
+.compare_box {
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
