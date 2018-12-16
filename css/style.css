@@ -429,17 +429,6 @@ body {
     transition-delay: 150ms;
 }
 
-/* .overlay.active:after {
-    content: '';
-    margin: -35px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-} */
-
 .overlay.active~.rp_header {
     filter: blur(4px);
     -webkit-filter: blur(4px);
@@ -461,7 +450,6 @@ body {
 }
 
 .rp_btn {
-    /* -webkit-appearance: button; */
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -758,7 +746,7 @@ body {
 @media only screen and (min-width: 2340px) {
     html,
     body {
-        font-size: 30px !important;
+        font-size: 28px !important;
     }
     .rp_content_box {
         max-width: 1980px;
@@ -768,7 +756,7 @@ body {
 @media only screen and (min-width: 2500px) {
     html,
     body {
-        font-size: 32px !important;
+        font-size: 30px !important;
     }
     .rp_content_box {
         max-width: 2180px;
