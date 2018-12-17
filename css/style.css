@@ -27,26 +27,26 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 8rem;
+    height: 9rem;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: #fff;
-    padding: 1.5rem 1.5rem 0;
+    padding: 1rem 1.5rem 0;
     z-index: 4;
-    transition: box-shadow .2s cubic-bezier(0.17, 0.04, 0.03, 0.94) .4s, height .2s cubic-bezier(0.17, 0.04, 0.03, 0.94) .2s;
+    transition: box-shadow .2s cubic-bezier(0.17, 0.04, 0.03, 0.94) .1s, height .2s cubic-bezier(0.17, 0.04, 0.03, 0.94) .2s;
 }
 
 .rp_header~.inner_body2 {
-    padding-top: 8rem;
+    padding-top: 9rem;
     padding-bottom: 4rem;
     overflow-y: auto;
 }
 
 .rp_header~.inner_body {
-    padding-top: 8.5rem;
+    padding-top: 9rem;
     padding-bottom: 4rem;
     overflow-y: auto;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 .rp_category_box {
-    display: flex;
+    display: none;
     justify-content: space-around;
     width: 100%;
     max-width: 960px;
@@ -172,6 +172,7 @@ body {
 }
 
 .rp_header.active .rp_category_box {
+    display: flex;
     opacity: 1;
     transform: scaleY(1);
     transition: .3s cubic-bezier(.25, .8, .5, 1);
@@ -191,7 +192,6 @@ body {
     height: 2.4rem;
     background-image: url("../img/base/panda.png");
     background-repeat: no-repeat;
-    background-position: top left;
     background-size: 2.4rem 2.4rem;
     cursor: pointer;
 }
@@ -199,7 +199,6 @@ body {
 .rp_panda_logo:hover {
     background-image: url("../img/base/panda.gif");
     background-repeat: no-repeat;
-    background-position: top left;
 }
 
 .rp_content_title {
@@ -673,10 +672,12 @@ body {
 }
 
 @media only screen and (max-width: 959px) {
+
     html,
     body {
         font-size: 11px;
     }
+
     .rp_content_box {
         padding: 1rem;
         width: initial;
@@ -684,80 +685,96 @@ body {
 }
 
 @media only screen and (min-width: 960px) {
+
     html,
     body {
         font-size: 11px;
     }
+
     .rp_content_box {
         max-width: 900px;
     }
 }
 
 @media only screen and (min-width: 1264px) {
+
     html,
     body {
         font-size: 13px;
     }
+
     .rp_content_box {
         max-width: 1185px;
     }
 }
 
 @media only screen and (min-width: 1400px) {
+
     html,
     body {
         font-size: 15px;
     }
+
     .rp_content_box {
         max-width: 1460px;
     }
 }
 
 @media only screen and (min-width: 1750px) {
+
     html,
     body {
         font-size: 16px;
     }
+
     .rp_content_box {
         max-width: 1460px;
     }
 }
 
 @media only screen and (min-width: 1904px) {
+
     html,
     body {
         font-size: 18px;
     }
+
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2180px) {
+
     html,
     body {
         font-size: 26px !important;
     }
+
     .rp_content_box {
         max-width: 1785px;
     }
 }
 
 @media only screen and (min-width: 2340px) {
+
     html,
     body {
         font-size: 28px !important;
     }
+
     .rp_content_box {
         max-width: 1980px;
     }
 }
 
 @media only screen and (min-width: 2500px) {
+
     html,
     body {
         font-size: 30px !important;
     }
+
     .rp_content_box {
         max-width: 2180px;
     }
@@ -768,6 +785,7 @@ body {
         -webkit-transform: scale(.8);
         opacity: 0;
     }
+
     100% {
         -webkit-transform: scale(1.1);
         opacity: 1;
@@ -780,6 +798,7 @@ body {
         -moz-transform: scale(.8);
         opacity: 0;
     }
+
     100% {
         -moz-transform: scale(1.1);
         opacity: 1;
@@ -792,6 +811,7 @@ body {
         transform: scale(.8);
         opacity: 0;
     }
+
     100% {
         transform: scale(1.1);
         opacity: 1;
@@ -877,6 +897,7 @@ body {
         bottom: 0;
         opacity: 0;
     }
+
     to {
         bottom: 6rem;
         opacity: 1;
@@ -888,6 +909,7 @@ body {
         bottom: 0;
         opacity: 0;
     }
+
     to {
         bottom: 6rem;
         opacity: 1;
@@ -899,6 +921,7 @@ body {
         bottom: 6rem;
         opacity: 1;
     }
+
     to {
         bottom: 0;
         opacity: 0;
@@ -910,6 +933,7 @@ body {
         bottom: 6rem;
         opacity: 1;
     }
+
     to {
         bottom: 0;
         opacity: 0;
