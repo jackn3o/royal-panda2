@@ -78,7 +78,7 @@
 
 .rp_product_box .rp_btn.add_card_button {
     top: 4rem;
-    background-color: #FF5722;
+    background-color: #fa8015;
     color: #fff;
     transition-delay: 0;
 }
@@ -86,7 +86,7 @@
 .rp_product_box .rp_btn.buy_now_button {
     top: 5rem;
     background-color: #fff;
-    border: 1px solid #FF5722;
+    border: 1px solid #fa8015;
     color: rgba(87, 90, 93, 255);
     transition-delay: 0;
 }
@@ -208,7 +208,7 @@
 }
 
 .rp_product_box.active .hover_menu .compare_button {
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rp_product_box.active .rating_box i,

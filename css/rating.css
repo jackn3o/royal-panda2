@@ -27,7 +27,7 @@
 .rating_box[data-rating='0.5'] i:first-child:before {
     content: "\f089";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='1'] i:nth-of-type(1n):before {
@@ -37,79 +37,79 @@
 .rating_box[data-rating='1'] i:first-child:before {
     content: "\f005";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='1.5'] i:nth-of-type(2):before {
     content: "\f089";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='1.5'] i:first-child:before {
     content: "\f005";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='2'] i:nth-of-type(-n+2):before {
     content: "\f005";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='2.5'] i:nth-of-type(-n+3):before {
     font-weight: 900;
     content: "\f005";
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='2.5'] i:nth-of-type(3):before {
     content: "\f089";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='3'] i:nth-of-type(-n+3):before {
     font-weight: 900;
     content: "\f005";
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='3.5'] i:nth-of-type(-n+3):before {
     font-weight: 900;
     content: "\f005";
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='3.5'] i:nth-of-type(4):before {
     content: "\f089";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='4'] i:nth-of-type(-n+4):before {
     font-weight: 900;
     content: "\f005";
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='4.5'] i:nth-of-type(-n+4):before {
     font-weight: 900;
     content: "\f005";
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='4.5'] i:nth-of-type(5):before {
     content: "\f089";
     font-weight: 900;
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box[data-rating='5'] i:nth-of-type(-n+5):before {
     font-weight: 900;
     content: "\f005";
-    color: #f44336;
+    color: #fa8015;
 }
 
 .rating_box i {
